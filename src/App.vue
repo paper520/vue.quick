@@ -4,7 +4,7 @@
         {{msg}}
       </header>
       <ul>
-      <!--路由导航-->
+      <!--路由导航【地方一】-->
         <li>
           <router-link to="/PageOneLink">页面一</router-link>
         </li>
@@ -12,7 +12,7 @@
           <router-link to="/PageTwoLink">页面二</router-link>
         </li>
     </ul>
-    <!--路由跳转视图-->
+    <!--路由跳转视图【地方二】-->
     <router-view></router-view>
     </section>
 </template>
