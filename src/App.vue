@@ -6,7 +6,7 @@
       <ul>
       <!--路由导航【地方一】-->
         <li>
-          <router-link to="/PageOneLink">页面一</router-link>
+          <router-link to="/PageOneLink">Vue基础部分</router-link>
         </li>
         <li>
           <router-link to="/PageTwoLink">页面二</router-link>
