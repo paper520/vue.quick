@@ -9,7 +9,7 @@
           <router-link to="/PageOneLink">Vue基础部分</router-link>
         </li>
         <li>
-          <router-link to="/PageTwoLink">页面二</router-link>
+          <router-link to="/PageTwoLink">Vue组件实例</router-link>
         </li>
     </ul>
     <!--路由跳转视图【地方二】-->
