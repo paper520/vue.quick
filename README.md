@@ -7,7 +7,7 @@
 
 ### 系列文章目录
 ------
-*  https://segmentfault.com/u/yelloxing/articles
+*  https://segmentfault.com/blog/vue2-study
 
 ### 免责声明
 ------
