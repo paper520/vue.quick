@@ -10,7 +10,6 @@ import "../clay.js/circleTree.js";
 export default {
   mounted: function() {
     clay("svg")
-      .appendTo("body")
       .attr("width", 800)
       .attr("height", 700)
 
