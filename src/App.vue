@@ -11,6 +11,9 @@
         <li>
           <router-link to="/PageTwoLink">Vue组件实例</router-link>
         </li>
+        <li>
+          <router-link to="/clay">clay.js</router-link>
+        </li>
     </ul>
     <!--路由跳转视图【地方二】-->
     <router-view></router-view>
