@@ -5,7 +5,6 @@ Vue.use(VueRouter);
 //路由跳转的组件，要提前注入
 import PageOne from '../components/PageOne.vue';//【地方一】
 import PageTwo from '../components/PageTwo.vue';
-import clay from '../components/clay.vue';
 
 //路由配置
 const router = new VueRouter({
@@ -20,10 +19,6 @@ const router = new VueRouter({
     {
         path: '/PageTwoLink',//【地方四】
         component: PageTwo
-    },
-    {
-        path: '/clay',//clay.js组件
-        component: clay
     }
     ]
 });

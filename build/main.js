@@ -63,85 +63,11 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 37);
+/******/ 	return __webpack_require__(__webpack_require__.s = 30);
 /******/ })
 /************************************************************************/
 /******/ ([
 /* 0 */
-/***/ (function(module, exports) {
-
-// this module is a runtime utility for cleaner component module output and will
-// be included in the final webpack user bundle
-
-module.exports = function normalizeComponent (
-  rawScriptExports,
-  compiledTemplate,
-  scopeId,
-  cssModules
-) {
-  var esModule
-  var scriptExports = rawScriptExports = rawScriptExports || {}
-
-  // ES6 modules interop
-  var type = typeof rawScriptExports.default
-  if (type === 'object' || type === 'function') {
-    esModule = rawScriptExports
-    scriptExports = rawScriptExports.default
-  }
-
-  // Vue.extend constructor export interop
-  var options = typeof scriptExports === 'function'
-    ? scriptExports.options
-    : scriptExports
-
-  // render functions
-  if (compiledTemplate) {
-    options.render = compiledTemplate.render
-    options.staticRenderFns = compiledTemplate.staticRenderFns
-  }
-
-  // scopedId
-  if (scopeId) {
-    options._scopeId = scopeId
-  }
-
-  // inject cssModules
-  if (cssModules) {
-    var computed = Object.create(options.computed || null)
-    Object.keys(cssModules).forEach(function (key) {
-      var module = cssModules[key]
-      computed[key] = function () { return module }
-    })
-    options.computed = computed
-  }
-
-  return {
-    esModule: esModule,
-    exports: scriptExports,
-    options: options
-  }
-}
-
-
-/***/ }),
-/* 1 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clay_core__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_clay_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_clay_core__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sizzle__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_sizzle___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_sizzle__);
-
-
-
-let clay = __WEBPACK_IMPORTED_MODULE_0_clay_core___default()(window);
-clay.config("$sizzleProvider", () => (selector, context) => __WEBPACK_IMPORTED_MODULE_1_sizzle___default()(selector, context));
-
-/* harmony default export */ __webpack_exports__["a"] = (clay);
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 /*
@@ -223,7 +149,64 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 3 */
+/* 1 */
+/***/ (function(module, exports) {
+
+// this module is a runtime utility for cleaner component module output and will
+// be included in the final webpack user bundle
+
+module.exports = function normalizeComponent (
+  rawScriptExports,
+  compiledTemplate,
+  scopeId,
+  cssModules
+) {
+  var esModule
+  var scriptExports = rawScriptExports = rawScriptExports || {}
+
+  // ES6 modules interop
+  var type = typeof rawScriptExports.default
+  if (type === 'object' || type === 'function') {
+    esModule = rawScriptExports
+    scriptExports = rawScriptExports.default
+  }
+
+  // Vue.extend constructor export interop
+  var options = typeof scriptExports === 'function'
+    ? scriptExports.options
+    : scriptExports
+
+  // render functions
+  if (compiledTemplate) {
+    options.render = compiledTemplate.render
+    options.staticRenderFns = compiledTemplate.staticRenderFns
+  }
+
+  // scopedId
+  if (scopeId) {
+    options._scopeId = scopeId
+  }
+
+  // inject cssModules
+  if (cssModules) {
+    var computed = Object.create(options.computed || null)
+    Object.keys(cssModules).forEach(function (key) {
+      var module = cssModules[key]
+      computed[key] = function () { return module }
+    })
+    options.computed = computed
+  }
+
+  return {
+    esModule: esModule,
+    exports: scriptExports,
+    options: options
+  }
+}
+
+
+/***/ }),
+/* 2 */
 /***/ (function(module, exports) {
 
 var g;
@@ -250,7 +233,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 4 */
+/* 3 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -440,7 +423,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 5 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -459,7 +442,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(36)
+var listToStyles = __webpack_require__(29)
 
 /*
 type StyleObject = {
@@ -661,7 +644,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
@@ -11727,20 +11710,21 @@ function applyToTag (styleElement, obj) {
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(24).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(19).setImmediate))
 
 /***/ }),
-/* 7 */
+/* 6 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(25);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__App_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__App_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__clay_js__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__router__ = __webpack_require__(10);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_clay_core__ = __webpack_require__(11);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_clay_core___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_clay_core__);
 
 
 
@@ -11752,7 +11736,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //根对象
 var vm = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     //挂载点
-    el: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_3__clay_js__["a" /* default */])('#root')[0],
+    el: __WEBPACK_IMPORTED_MODULE_3_clay_core___default()('#root')[0],
     //2.使用刚刚的路由配置
     router: __WEBPACK_IMPORTED_MODULE_2__router__["a" /* default */],
     //启动组件
@@ -11787,20 +11771,11 @@ var vm = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 });
 
 /***/ }),
-/* 8 */
-/***/ (function(module, exports) {
-
-module.exports = {"name":"编程符号","data":{"name":"flare","children":[{"name":"analytics","children":[{"name":"cluster","children":[{"name":"AgglomerativeCluster","value":3938},{"name":"CommunityStructure","value":3812},{"name":"HierarchicalCluster","value":6714},{"name":"MergeEdge","value":743}]},{"name":"graph","children":[{"name":"BetweennessCentrality","value":3534},{"name":"LinkDistance","value":5731},{"name":"MaxFlowMinCut","value":7840},{"name":"ShortestPaths","value":5914},{"name":"SpanningTree","value":3416}]},{"name":"optimization","children":[{"name":"AspectRatioBanker","value":7074}]}]},{"name":"animate","children":[{"name":"Easing","value":17010},{"name":"FunctionSequence","value":5842},{"name":"interpolate","children":[{"name":"ArrayInterpolator","value":1983},{"name":"ColorInterpolator","value":2047},{"name":"DateInterpolator","value":1375},{"name":"Interpolator","value":8746},{"name":"MatrixInterpolator","value":2202},{"name":"NumberInterpolator","value":1382},{"name":"ObjectInterpolator","value":1629},{"name":"PointInterpolator","value":1675},{"name":"RectangleInterpolator","value":2042}]},{"name":"ISchedulable","value":1041},{"name":"Parallel","value":5176},{"name":"Pause","value":449},{"name":"Scheduler","value":5593},{"name":"Sequence","value":5534},{"name":"Transition","value":9201},{"name":"Transitioner","value":19975},{"name":"TransitionEvent","value":1116},{"name":"Tween","value":6006}]},{"name":"datas","children":[{"name":"converters","children":[{"name":"Converters","value":721},{"name":"DelimitedTextConverter","value":4294},{"name":"GraphMLConverter","value":9800},{"name":"IDataConverter","value":1314},{"name":"JSONConverter","value":2220}]},{"name":"DataField","value":1759},{"name":"DataSchema","value":2165},{"name":"DataSet","value":586},{"name":"DataSource","value":3331},{"name":"DataTable","value":772},{"name":"DataUtil","value":3322}]},{"name":"display","children":[{"name":"DirtySprite","value":8833},{"name":"LineSprite","value":1732},{"name":"RectSprite","value":3623},{"name":"TextSprite","value":10066}]},{"name":"flex","children":[{"name":"FlareVis","value":4116}]},{"name":"physics","children":[{"name":"DragForce","value":1082},{"name":"GravityForce","value":1336},{"name":"IForce","value":319},{"name":"NBodyForce","value":10498},{"name":"Particle","value":2822},{"name":"Simulation","value":9983},{"name":"Spring","value":2213},{"name":"SpringForce","value":1681}]},{"name":"querylibrary","children":[{"name":"AggregateExpression","value":1616},{"name":"And","value":1027},{"name":"Arithmetic","value":3891},{"name":"Average","value":891},{"name":"BinaryExpression","value":2893},{"name":"Comparison","value":5103},{"name":"CompositeExpression","value":3677},{"name":"Count","value":781},{"name":"DateUtil","value":4141},{"name":"Distinct","value":933},{"name":"Expression","value":5130},{"name":"ExpressionIterator","value":3617},{"name":"Fn","value":3240},{"name":"If","value":2732},{"name":"IsA","value":2039},{"name":"Literal","value":1214},{"name":"Match","value":3748},{"name":"Maximum","value":843},{"name":"methods","children":[{"name":"add","value":593},{"name":"and","value":330},{"name":"average","value":287},{"name":"count","value":277},{"name":"distinct","value":292},{"name":"div","value":595},{"name":"eq","value":594},{"name":"fn","value":460},{"name":"gt","value":603},{"name":"gte","value":625},{"name":"iff","value":748},{"name":"isa","value":461},{"name":"lt","value":597},{"name":"lte","value":619},{"name":"max","value":283},{"name":"min","value":283},{"name":"mod","value":591},{"name":"mul","value":603},{"name":"neq","value":599},{"name":"not","value":386},{"name":"or","value":323},{"name":"orderby","value":307},{"name":"range","value":772},{"name":"select","value":296},{"name":"stddev","value":363},{"name":"sub","value":600},{"name":"sum","value":280},{"name":"update","value":307},{"name":"variance","value":335},{"name":"where","value":299},{"name":"xor","value":354},{"name":"-","value":264}]},{"name":"Minimum","value":843},{"name":"Not","value":1554},{"name":"Or","value":970},{"name":"Query","value":13896},{"name":"Range","value":1594},{"name":"StringUtil","value":4130},{"name":"Sum","value":791},{"name":"Variable","value":1124},{"name":"Variance","value":1876},{"name":"Xor","value":1101}]},{"name":"scale","children":[{"name":"IScaleMap","value":2105},{"name":"LinearScale","value":1316},{"name":"LogScale","value":3151},{"name":"OrdinalScale","value":3770},{"name":"QuantileScale","value":2435},{"name":"QuantitativeScale","value":4839},{"name":"RootScale","value":1756},{"name":"Scale","value":4268},{"name":"ScaleType","value":1821},{"name":"TimeScale","value":5833}]},{"name":"util","children":[{"name":"Arrays","value":8258},{"name":"Colors","value":10001},{"name":"Dates","value":8217},{"name":"Displays","value":12555},{"name":"Filter","value":2324},{"name":"Geometry","value":10993},{"name":"heap","children":[{"name":"FibonacciHeap","value":9354},{"name":"HeapNode","value":1233}]},{"name":"IEvaluable","value":335},{"name":"IPredicate","value":383},{"name":"IValueProxy","value":874},{"name":"math","children":[{"name":"DenseMatrix","value":3165},{"name":"IMatrix","value":2815},{"name":"SparseMatrix","value":3366}]},{"name":"Maths","value":17705},{"name":"Orientation","value":1486},{"name":"palette","children":[{"name":"ColorPalette","value":6367},{"name":"Palette","value":1229},{"name":"ShapePalette","value":2059},{"name":"SizePalette","value":2291}]},{"name":"Property","value":5559},{"name":"Shapes","value":19118},{"name":"Sort","value":6887},{"name":"Stats","value":6557},{"name":"Strings","value":22026}]},{"name":"vis","children":[{"name":"axis","children":[{"name":"Axes","value":1302},{"name":"Axis","value":24593},{"name":"AxisGridLine","value":652},{"name":"AxisLabel","value":636},{"name":"CartesianAxes","value":6703}]},{"name":"controls","children":[{"name":"AnchorControl","value":2138},{"name":"ClickControl","value":3824},{"name":"Control","value":1353},{"name":"ControlList","value":4665},{"name":"DragControl","value":2649},{"name":"ExpandControl","value":2832},{"name":"HoverControl","value":4896},{"name":"IControl","value":763},{"name":"PanZoomControl","value":5222},{"name":"SelectionControl","value":7862},{"name":"TooltipControl","value":8435}]},{"name":"data","children":[{"name":"Data","value":20544},{"name":"DataList","value":19788},{"name":"DataSprite","value":10349},{"name":"EdgeSprite","value":3301},{"name":"NodeSprite","value":19382},{"name":"render","children":[{"name":"ArrowType","value":698},{"name":"EdgeRenderer","value":5569},{"name":"IRenderer","value":353},{"name":"ShapeRenderer","value":2247}]},{"name":"ScaleBinding","value":11275},{"name":"Tree","value":7147},{"name":"TreeBuilder","value":9930}]},{"name":"events","children":[{"name":"DataEvent","value":2313},{"name":"SelectionEvent","value":1880},{"name":"TooltipEvent","value":1701},{"name":"VisualizationEvent","value":1117}]},{"name":"legend","children":[{"name":"Legend","value":20859},{"name":"LegendItem","value":4614},{"name":"LegendRange","value":10530}]},{"name":"operator","children":[{"name":"distortion","children":[{"name":"BifocalDistortion","value":4461},{"name":"Distortion","value":6314},{"name":"FisheyeDistortion","value":3444}]},{"name":"encoder","children":[{"name":"ColorEncoder","value":3179},{"name":"Encoder","value":4060},{"name":"PropertyEncoder","value":4138},{"name":"ShapeEncoder","value":1690},{"name":"SizeEncoder","value":1830}]},{"name":"filter","children":[{"name":"FisheyeTreeFilter","value":5219},{"name":"GraphDistanceFilter","value":3165},{"name":"VisibilityFilter","value":3509}]},{"name":"IOperator","value":1286},{"name":"label","children":[{"name":"Labeler","value":9956},{"name":"RadialLabeler","value":3899},{"name":"StackedAreaLabeler","value":3202}]},{"name":"Operator","value":2490},{"name":"OperatorList","value":5248},{"name":"OperatorSequence","value":4190},{"name":"OperatorSwitch","value":2581},{"name":"SortOperator","value":2023}]},{"name":"Visualization","value":16540}]}]}}
-
-/***/ }),
-/* 9 */
+/* 7 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
 //
 //
 //
@@ -11830,7 +11805,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 10 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11864,7 +11839,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 11 */
+/* 9 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11899,201 +11874,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 12 */
+/* 10 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__clay_js__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_program_json__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__data_program_json___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__data_program_json__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__clay_js_circleTree_js__ = __webpack_require__(13);
-//
-//
-//
-//
-
-
-
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  mounted: function () {
-    __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__clay_js__["a" /* default */])("svg").attr("width", 800).attr("height", 700)
-
-    // 使用组件
-    .use("circleTree", {
-      // 数据
-      data: __WEBPACK_IMPORTED_MODULE_1__data_program_json___default.a.data,
-
-      // 结点名称
-      name: orgItem => orgItem.name,
-
-      // 树的圆心和半径
-      cx: 350,
-      cy: 350,
-      r: 300,
-
-      // 树结构配置
-      root: initTree => initTree,
-      child: parentTree => parentTree.children,
-      id: treedata => treedata.name + (treedata.value ? "_" + treedata.value : "")
-    });
-  }
-});
-
-/***/ }),
-/* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__index_js__ = __webpack_require__(1);
-
-/**
- * circleTree
- * -------------------------------
- * 名称：圆形树
- * 类型：svg
- * 作者：心叶(yelloxing@gmail.com)
- *
- * 开发日志
- * ===============================
- * 1.2018年12月29日：建立
- */
-
-__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].component("circleTree", function () {
-    return {
-        "link": function (element, $scope) {
-
-            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])("<g circle-tree>" + "<g class='line'></g>" + "<g class='circle'></g>" + "<g class='text'></g>" + "</g>").appendTo(element);
-
-            /**
-             * 1.常用工具创建和公共配置
-             * ----------------
-             */
-
-            //  文字和连线
-            var text = __WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].svg.text().setAlign('left').setSize(1).setColor('gray');
-            var bezier = __WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].svg.bezier().setType($scope.cx - 20, $scope.cy - 20, 'circle');
-
-            __WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].treeLayout()
-
-            // 获取根结点的方法
-            .root($scope.root)
-
-            // 获取子结点的方法
-            .child($scope.child)
-
-            // 获取结点ID方法
-            .id($scope.id)
-
-            /**
-             * 2.配置绘制方法
-             * ----------------
-             */
-            .drawer(function (nodes, rid, size) {
-
-                var i,
-                    p,
-                    deep = 0;
-
-                for (i in nodes) if (nodes[i].left > deep) deep = nodes[i].left;
-                var dis = $scope.r / (deep - 0.5);
-
-                // 对圆形树调整结点位置
-                for (i in nodes) {
-                    p = __WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].rotate($scope.cx, $scope.cy, nodes[i].top / size * Math.PI * 2, $scope.cx + (nodes[i].left - 0.5) * dis, $scope.cy);
-                    nodes[i].x = p[0];
-                    nodes[i].y = p[1];
-                }
-
-                // 绘制
-                __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('<circle _id="' + nodes[rid].id + '"></circle>').appendTo('.circle').attr('cx', nodes[rid].x).attr('cy', nodes[rid].y).attr('r', 3).css({
-                    "fill": "#ea779e"
-                });
-                text(nodes[rid].x - -20, nodes[rid].y, $scope.name(nodes[rid].data)).attr('_id', nodes[rid].id).css({
-                    "font-size": "10px"
-                }).appendTo('.text');
-                (function doDrawer(currentNode) {
-
-                    var _i, _node;
-                    for (_i in currentNode.children) {
-                        _node = nodes[currentNode.children[_i]];
-
-                        // 圆圈初始化
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('<circle _id="' + _node.id + '"></circle>').appendTo('.circle').attr('cx', currentNode.x).attr('cy', currentNode.y).attr('r', 3).css({
-                            "fill": "#ea779e"
-                        });
-
-                        // // 文字初始化
-                        text(currentNode.x, currentNode.y, $scope.name(_node.data)).attr('_id', _node.id).appendTo('.text');
-
-                        // 连线初始化
-                        __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('<path></path>').attr('_id', _node.id).appendTo('.line').css({
-                            "fill": "none",
-                            "stroke": "gray"
-                        });
-                    }
-
-                    // 启动动画
-                    __WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */].animation(function (deep) {
-
-                        var _currentX, _currentY;
-                        for (_i in currentNode.children) {
-                            _node = nodes[currentNode.children[_i]];
-
-                            _currentX = (_node.x - currentNode.x) * deep - -currentNode.x;
-                            _currentY = (_node.y - currentNode.y) * deep - -currentNode.y;
-
-                            // 圆圈调整
-                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('.circle').find('[_id="' + _node.id + '"]').attr('cx', _currentX).attr('cy', _currentY);
-
-                            // 文字调整
-                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('.text').find('[_id="' + _node.id + '"]').attr('x', _currentX + 10).attr('y', _currentY).css({
-                                "font-size": 10 * deep + "px"
-                            }).attr('transform', "rotate(" + _node.top / size * 360 + "," + _currentX + "," + _currentY + ")");
-
-                            // 连线调整
-                            __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__index_js__["a" /* default */])('.line').find('[_id="' + _node.id + '"]').attr('d', bezier.setL(40 * deep)(+currentNode.x, +currentNode.y, +_currentX, +_currentY));
-                        }
-                    }, 700, function () {
-
-                        // 递归调用
-                        for (_i in currentNode.children) {
-                            _node = nodes[currentNode.children[_i]];
-                            doDrawer(_node);
-                        }
-                    });
-                })(nodes[rid]);
-            })
-
-            // 启动
-            ($scope.data);
-        }
-    };
-});
-
-/***/ }),
-/* 14 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(33);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_PageOne_vue__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_vue_router__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_PageOne_vue__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__components_PageOne_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2__components_PageOne_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_PageTwo_vue__ = __webpack_require__(27);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_PageTwo_vue__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__components_PageTwo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3__components_PageTwo_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_clay_vue__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__components_clay_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4__components_clay_vue__);
 
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.use(__WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]);
 
 //路由跳转的组件，要提前注入
  //【地方一】
-
 
 
 //路由配置
@@ -12107,46 +11904,41 @@ const router = new __WEBPACK_IMPORTED_MODULE_1_vue_router__["a" /* default */]({
     }, {
         path: '/PageTwoLink', //【地方四】
         component: __WEBPACK_IMPORTED_MODULE_3__components_PageTwo_vue___default.a
-    }, {
-        path: '/clay', //clay.js组件
-        component: __WEBPACK_IMPORTED_MODULE_4__components_clay_vue___default.a
     }]
 });
 
 /* harmony default export */ __webpack_exports__["a"] = (router);
 
 /***/ }),
-/* 15 */
+/* 11 */
 /***/ (function(module, exports) {
 
 /*!
-* clay.js - Provide more flexible data visualization solutions!
+* clay.js - Provide a more friendly web-side drawing interface!
 * git+https://github.com/yelloxing/clay-core.git
 * 
 * author 心叶
 *
-* version 1.6.0
+* version 1.8.0
 * 
 * build Sun Jul 29 2018
 *
 * Copyright yelloxing
 * Released under the MIT license
 * 
-* Date:Thu Dec 27 2018 19:37:14 GMT+0800 (GMT+08:00)
+* Date:Fri Jan 04 2019 10:31:39 GMT+0800 (GMT+08:00)
 */
 (function (global, factory) {
 
     'use strict';
 
     if (typeof module === "object" && typeof module.exports === "object") {
-        module.exports = function (target) {
-            return factory(target || window);
-        };
+        module.exports = factory();
     } else {
-        global.clay = global.$$ = factory(global);
+        global.clay = global.$$ = factory();
     }
 
-})(typeof window !== "undefined" ? window : this, function (global, undefined) {
+})(typeof window !== "undefined" ? window : this, function (undefined) {
 
     'use strict';
 
@@ -12335,7 +12127,7 @@ function _toNode(str) {
     var frame = document.createElementNS(_namespace.svg, 'svg');
     // 把传递元素类型和标记进行统一处理
     if (new RegExp("^" + _regexp.identifier + "$").test(str)) str = "<" + str + "></" + str + ">";
-    frame.innerHTML = str;
+    _innerSVG(frame,str);
     var childNodes = frame.childNodes, flag, child;
     for (flag = 0; flag < childNodes.length; flag++) {
         if (childNodes[flag].nodeType === 1 || childNodes[flag].nodeType === 9 || childNodes[flag].nodeType === 11) {
@@ -12612,93 +12404,9 @@ clay.prototype.position = function (event) {
 
 };
 
-// 判断浏览器类型
-var _browser = (function () {
-
-    var userAgent = global.navigator.userAgent;
-    if (userAgent.indexOf("Opera") > -1 || userAgent.indexOf("OPR") > -1) {
-        return "Opera";
-    }
-    if ((userAgent.indexOf("compatible") > -1 && userAgent.indexOf("MSIE") > -1) ||
-        (userAgent.indexOf("Trident") > -1 && userAgent.indexOf("rv:11.0") > -1)) {
-        return "IE";
-    }
-    if (userAgent.indexOf("Edge") > -1) {
-        return "Edge";
-    }
-    if (userAgent.indexOf("Firefox") > -1) {
-        return "Firefox";
-    }
-    if (userAgent.indexOf("Chrome") > -1) {
-        return "Chrome";
-    }
-    if (userAgent.indexOf("Safari") > -1) {
-        return "Safari";
-    }
-    return -1;
-
-})();
-
-// 判断IE浏览器版本
-var _IE = (function () {
-
-    // 如果不是IE浏览器直接返回
-    if (_browser != 'IE') return -1;
-
-    var userAgent = global.navigator.userAgent;
-    if (userAgent.indexOf("Trident") > -1 && userAgent.indexOf("rv:11.0") > -1) return 11;
-
-    if (/MSIE 10/.test(userAgent)) return 10;
-    if (/MSIE 9/.test(userAgent)) return 9;
-    if (/MSIE 8/.test(userAgent)) return 8;
-    if (/MSIE 7/.test(userAgent)) return 7;
-
-    // IE版本小于7
-    return 6;
-})();
-
-// 针对不支持的浏览器给出提示
-if (_IE < 9 && _browser == 'IE') throw new Error('IE browser version is too low, minimum support IE9!');
-
-// 获取函数名称
-// 部分旧浏览器不支持
-if ('name' in Function.prototype === false) {
-    // https://www.ecma-international.org/ecma-262/6.0/#sec-setfunctionname
-    Object.defineProperty(Function.prototype, 'name', {
-        get: function () {
-            return this.toString().match(/^\s*function\s*([^\(\s]*)/)[1];
-        }
-    });
-}
-
-// 表示二个正的浮点数之间的最新差值
-// 你可以由此判断二个浮点数是否相对
-// （因为js浮点运算都不是准确的，不可以简单的等号判断）
-// 老火狐和IE不支持
-if (Number.EPSILON === undefined) {
-    // https://www.ecma-international.org/ecma-262/6.0/#sec-number.epsilon
-    Number.EPSILON = Math.pow(2, - 52);
-}
-
-// 判断是不是整数
-// IE浏览器不支持
-if (Number.isInteger === undefined) {
-    Number.isInteger = function (value) {
-        // https://www.ecma-international.org/ecma-262/6.0/#sec-isfinite-number
-        return typeof value === 'number' && isFinite(value) && Math.floor(value) === value;
-    };
-}
-
-var _innerHTML = {
-    get: function () {
-        var frame = document.createElement("div"), i;
-        for (i = 0; i < this.childNodes.length; i++) {
-            // 深度克隆，克隆节点以及节点下面的子内容
-            frame.appendChild(this.childNodes[i].cloneNode(true));
-        }
-        return frame.innerHTML;
-    },
-    set: function (svgstring) {
+// 针对部分浏览器svg不支持innerHTML方法
+var _innerSVG = function (target, svgstring) {
+    if ('innerHTML' in SVGElement.prototype === false || 'innerHTML' in SVGSVGElement.prototype === false) {
         var frame = document.createElement("div"), i;
         frame.innerHTML = svgstring;
         var toSvgNode = function (htmlNode) {
@@ -12723,47 +12431,11 @@ var _innerHTML = {
                 node = node.nextSibling;
             }
         })(frame.firstChild, rslNode);
-        this.appendChild(rslNode);
+        target.appendChild(rslNode);
+    } else {
+        target.innerHTML = svgstring;
     }
 };
-
-// 针对部分浏览器svg上没有innerHTML进行加强
-if ('innerHTML' in SVGElement.prototype === false) {
-    Object.defineProperty(SVGElement.prototype, 'innerHTML', _innerHTML);
-}
-if ('innerHTML' in SVGSVGElement.prototype === false) {
-    Object.defineProperty(SVGSVGElement.prototype, 'innerHTML', _innerHTML);
-}
-
-// 兼容老IE浏览器
-// 请不要使用event.srcElement获取
-// https://dom.spec.whatwg.org/#dom-event-srcelement
-if ('target' in Event.prototype === false) {
-    Object.defineProperty(Event.prototype, 'target', {
-        get: function () {
-            return this.srcElement;
-        }
-    });
-}
-
-// 取消冒泡事件
-// 防止对事件流中当前节点的后续节点中的所有事件侦听器进行处理
-// 此方法不会影响当前节点中的任何事件侦听器
-// 如果需要取消包括本结点的方法，应该使用stopImmediatePropagation()
-// https://dom.spec.whatwg.org/#dom-event-stopimmediatepropagation
-if ('stopPropagation' in Event.prototype === false) {
-    Event.prototype.stopPropagation = function () {
-        this.cancelBubble = true;
-    };
-}
-
-// 阻止默认事件
-// https://dom.spec.whatwg.org/#dom-event-preventdefault
-if ('preventDefault' in Event.prototype === false) {
-    Event.prototype.preventDefault = function () {
-        this.returnValue = false;
-    };
-}
 
 var _clock = {
     //当前正在运动的动画的tick函数堆栈
@@ -12959,141 +12631,6 @@ clay.loop = function (datas, callback) {
     return clay;
 };
 
-var _ajaxConfig = {
-    "headers": {},
-    "timeout": 3000,
-    "context": "",
-    "request": function (config) {
-        return config;
-    },
-    "success": function (data, doback) {
-        if (typeof doback == 'function') {
-            doback(data);
-        }
-    },
-    "error": function (error, doback) {
-        if (typeof doback == 'function') {
-            doback(error);
-        }
-    }
-};
-_provider.$httpProvider = function (config) {
-    var row;
-    for (row in config) {
-        _ajaxConfig[row] = config[row];
-    }
-};
-
-/**
- * XMLHttpRequest
- *
- * config={
- * "type":"POST"|"GET",
- * "url":地址,
- * "success":成功回调(非必须),
- * "error":错误回调(非必须),
- * "fileload":文件传输进度回调(非必须),
- * "timeout":超时时间,
- * "header":{
- *          //请求头
- *      },
- * "data":post时带的数据（非必须）
- * }
- */
-var _ajax = function (config) {
-    config = _ajaxConfig.request(config);
-    var i;
-
-    // 获取xhr对象
-    var xhr = window.XMLHttpRequest ?
-        // IE7+, Firefox, Chrome, Opera, Safari
-        new XMLHttpRequest() :
-        // IE6, IE5
-        new ActiveXObject("Microsoft.XMLHTTP");
-
-    // 打开请求地址
-    if (!/^\//.test(config.url)) config.url = _ajaxConfig.context + "" + config.url;
-    xhr.open(config.type, config.url, true);
-
-    // 设置超时时间
-    xhr.timeout = config.timeout || _ajaxConfig.timeout;
-
-    // 文件传递进度回调
-    if (typeof config.fileload == 'function') {
-        var updateProgress = function (e) {
-            if (e.lengthComputable)
-                config.fileload(e.loaded / e.total);
-        };
-        xhr.onprogress = updateProgress;
-        xhr.upload.onprogress = updateProgress;
-    }
-
-    // 请求成功回调
-    xhr.onload = function () {
-        _ajaxConfig.success({
-            "response": xhr.response,
-            "status": xhr.status,
-            "header": xhr.getAllResponseHeaders()
-        }, config.success);
-    };
-
-    // 错误回调
-    // 请求中出错回调
-    xhr.onerror = function () {
-        _ajaxConfig.error({
-            "type": "error"
-        }, config.error);
-    };
-    // 请求超时回调
-    xhr.ontimeout = function () {
-        _ajaxConfig.error({
-            "type": "timeout"
-        }, config.error);
-    };
-
-    // 配置请求头
-    for (i in _ajaxConfig.headers)
-        xhr.setRequestHeader(i, _ajaxConfig.headers[i]);
-    for (i in config.header)
-        xhr.setRequestHeader(i, config.header[i]);
-
-    // 发送请求
-    xhr.send(config.data);
-};
-
-// post请求
-clay.post = function (header, timeout) {
-    var post = function (url, param, callback, errorback) {
-        _ajax({
-            "type": "POST",
-            "url": url,
-            "success": callback,
-            "error": errorback,
-            "timeout": timeout,
-            "header": header || {},
-            "data": param ? JSON.stringify(param) : ""
-        });
-        return post;
-    };
-    return post;
-};
-
-// get请求
-clay.get = function (header, timeout) {
-    var get = function (url, callback, errorback) {
-        _ajax({
-            "type": "GET",
-            "url": url,
-            "success": callback,
-            "error": errorback,
-            "timeout": timeout,
-            "header": header || {}
-        });
-        return get;
-    };
-    return get;
-};
-
 // 用特定色彩绘制区域
 var _drawerRegion = function (pen, color, drawback, regionManger) {
     pen.beginPath();
@@ -13244,6 +12781,205 @@ clay.prototype.layer = function () {
 
 };
 
+// 二个4x4矩阵相乘
+// 或矩阵和齐次坐标相乘
+var _multiply = function (matrix4, param) {
+    var newParam = [], i, j;
+    for (i = 0; i < 4; i++)
+        for (j = 0; j < param.length / 4; j++)
+            newParam[j * 4 + i] =
+                matrix4[i] * param[j * 4] +
+                matrix4[i + 4] * param[j * 4 + 1] +
+                matrix4[i + 8] * param[j * 4 + 2] +
+                matrix4[i + 12] * param[j * 4 + 3];
+    return newParam;
+};
+
+// 求一个矩阵的行列式（方阵）
+// 4x4 或 3x3
+var _determinant = function (matrixX) {
+
+    // 3x3
+    if (matrixX.length == 9) {
+        return matrixX[0] * matrixX[4] * matrixX[8] -
+            matrixX[0] * matrixX[7] * matrixX[5] -
+            matrixX[3] * matrixX[1] * matrixX[8] +
+            matrixX[3] * matrixX[7] * matrixX[2] +
+            matrixX[6] * matrixX[1] * matrixX[5] -
+            matrixX[6] * matrixX[4] * matrixX[2];
+    }
+
+    // 4x4
+    else if (matrixX.length == 16) {
+        return matrixX[0] * _determinant([
+            matrixX[5], matrixX[6], matrixX[7],
+            matrixX[9], matrixX[10], matrixX[11],
+            matrixX[13], matrixX[14], matrixX[15]
+        ]) -
+            matrixX[4] * _determinant([
+                matrixX[1], matrixX[2], matrixX[3],
+                matrixX[9], matrixX[10], matrixX[11],
+                matrixX[13], matrixX[14], matrixX[15]
+            ]) +
+            matrixX[8] * _determinant([
+                matrixX[1], matrixX[2], matrixX[3],
+                matrixX[5], matrixX[6], matrixX[7],
+                matrixX[13], matrixX[14], matrixX[15]
+            ]) -
+            matrixX[12] * _determinant([
+                matrixX[1], matrixX[2], matrixX[3],
+                matrixX[5], matrixX[6], matrixX[7],
+                matrixX[9], matrixX[10], matrixX[11]
+            ]);
+    }
+
+    // 其它情况
+    else {
+        throw new Error('Unsupported parameter!');
+    }
+
+};
+
+// 求一个4x4矩阵的全部代数余子式Aij
+var _algebraic_cofactor = function (matrix4) {
+    return [
+
+        // 0
+        _determinant([
+            matrix4[5], matrix4[6], matrix4[7],
+            matrix4[9], matrix4[10], matrix4[11],
+            matrix4[13], matrix4[14], matrix4[15]
+        ]),
+
+        // 1
+        -_determinant([
+            matrix4[4], matrix4[6], matrix4[7],
+            matrix4[8], matrix4[10], matrix4[11],
+            matrix4[12], matrix4[14], matrix4[15]
+        ]),
+
+        // 2
+        _determinant([
+            matrix4[4], matrix4[5], matrix4[7],
+            matrix4[8], matrix4[8], matrix4[11],
+            matrix4[12], matrix4[13], matrix4[15]
+        ]),
+
+        // 3
+        -_determinant([
+            matrix4[4], matrix4[5], matrix4[6],
+            matrix4[8], matrix4[9], matrix4[10],
+            matrix4[12], matrix4[13], matrix4[14]
+        ]),
+
+        // 4
+        -_determinant([
+            matrix4[1], matrix4[2], matrix4[3],
+            matrix4[9], matrix4[10], matrix4[11],
+            matrix4[13], matrix4[14], matrix4[15]
+        ]),
+
+        // 5
+        _determinant([
+            matrix4[0], matrix4[2], matrix4[3],
+            matrix4[8], matrix4[10], matrix4[11],
+            matrix4[12], matrix4[14], matrix4[15]
+        ]),
+
+        // 6
+        -_determinant([
+            matrix4[0], matrix4[1], matrix4[3],
+            matrix4[8], matrix4[9], matrix4[11],
+            matrix4[12], matrix4[13], matrix4[15]
+        ]),
+
+        // 7
+        _determinant([
+            matrix4[0], matrix4[1], matrix4[2],
+            matrix4[8], matrix4[9], matrix4[10],
+            matrix4[12], matrix4[13], matrix4[14]
+        ]),
+
+        // 8
+        _determinant([
+            matrix4[1], matrix4[2], matrix4[3],
+            matrix4[5], matrix4[6], matrix4[7],
+            matrix4[13], matrix4[14], matrix4[15]
+        ]),
+
+        // 9
+        -_determinant([
+            matrix4[0], matrix4[2], matrix4[3],
+            matrix4[4], matrix4[6], matrix4[7],
+            matrix4[12], matrix4[14], matrix4[15]
+        ]),
+
+        // 10
+        _determinant([
+            matrix4[0], matrix4[1], matrix4[3],
+            matrix4[4], matrix4[5], matrix4[7],
+            matrix4[12], matrix4[13], matrix4[15]
+        ]),
+
+        // 11
+        -_determinant([
+            matrix4[0], matrix4[1], matrix4[2],
+            matrix4[4], matrix4[5], matrix4[6],
+            matrix4[12], matrix4[13], matrix4[14]
+        ]),
+
+        // 12
+        -_determinant([
+            matrix4[1], matrix4[2], matrix4[3],
+            matrix4[5], matrix4[6], matrix4[7],
+            matrix4[9], matrix4[10], matrix4[11]
+        ]),
+
+        // 13
+        _determinant([
+            matrix4[0], matrix4[2], matrix4[3],
+            matrix4[4], matrix4[6], matrix4[7],
+            matrix4[8], matrix4[10], matrix4[11]
+        ]),
+
+        // 14
+        -_determinant([
+            matrix4[0], matrix4[1], matrix4[3],
+            matrix4[4], matrix4[5], matrix4[7],
+            matrix4[8], matrix4[9], matrix4[11]
+        ]),
+
+        // 15
+        _determinant([
+            matrix4[0], matrix4[1], matrix4[2],
+            matrix4[4], matrix4[5], matrix4[6],
+            matrix4[8], matrix4[9], matrix4[10]
+        ])
+    ];
+};
+
+// 求一个4x4矩阵的伴随矩阵A*
+var _adjoint_matrix = function (matrix4) {
+    var algebraic_cofactor = _algebraic_cofactor(matrix4);
+    return [
+        algebraic_cofactor[0], algebraic_cofactor[4], algebraic_cofactor[8], algebraic_cofactor[12],
+        algebraic_cofactor[1], algebraic_cofactor[5], algebraic_cofactor[9], algebraic_cofactor[13],
+        algebraic_cofactor[2], algebraic_cofactor[6], algebraic_cofactor[10], algebraic_cofactor[14],
+        algebraic_cofactor[3], algebraic_cofactor[7], algebraic_cofactor[11], algebraic_cofactor[15]
+    ];
+};
+
+// 求一个4x4矩阵的逆矩阵A'
+var _inverse_matrix = function (matrix4) {
+    var adjoint = _adjoint_matrix(matrix4),
+        determinant = _determinant(matrix4),
+        flag, newMatrix4 = [];
+    if (determinant == 0) throw new Error('This matrix is irreversible!');
+    for (flag = 0; flag < 16; flag++)
+        newMatrix4[flag] = adjoint[flag] / determinant;
+    return newMatrix4;
+};
+
 // 在(a,b,c)方向位移d
 var _move = function (d, a, b, c) {
     c = c || 0;
@@ -13336,24 +13072,6 @@ var _transform = function (a1, b1, c1, a2, b2, c2) {
     }
 };
 
-// 二个4x4矩阵相乘
-// 或矩阵和齐次坐标相乘
-var _multiply = function (matrix4, param) {
-    var newParam = [], i, j;
-    for (i = 0; i < 4; i++)
-        for (j = 0; j < param.length / 4; j++)
-            newParam[j * 4 + i] =
-                matrix4[i] * param[j * 4] +
-                matrix4[i + 4] * param[j * 4 + 1] +
-                matrix4[i + 8] * param[j * 4 + 2] +
-                matrix4[i + 12] * param[j * 4 + 3];
-    return newParam;
-};
-
-/**
- * 4x4矩阵
- * 列主序存储
- */
 clay.Matrix4 = function (initMatrix4) {
 
     var matrix4 = initMatrix4 || [
@@ -13364,25 +13082,39 @@ clay.Matrix4 = function (initMatrix4) {
     ];
 
     var matrix4Obj = {
+
+        // 移动
         "move": function (dis, a, b, c) {
             matrix4 = _multiply(_move(dis, a, b, c), matrix4);
             return matrix4Obj;
         },
+
+        // 旋转
         "rotate": function (deg, a1, b1, c1, a2, b2, c2) {
             var matrix4s = _transform(a1, b1, c1, a2, b2, c2);
             matrix4 = _multiply(_multiply(_multiply(matrix4s[1], _rotate(deg)), matrix4s[0]), matrix4);
             return matrix4Obj;
         },
+
+        // 缩放
         "scale": function (xTimes, yTimes, zTimes, cx, cy, cz) {
             matrix4 = _multiply(_scale(xTimes, yTimes, zTimes, cx, cy, cz), matrix4);
             return matrix4Obj;
         },
+
         // 乘法
         // 可以传入一个矩阵(matrix4,flag)
         "multiply": function (newMatrix4, flag) {
             matrix4 = flag ? _multiply(matrix4, newMatrix4) : _multiply(newMatrix4, matrix4);
             return matrix4Obj;
         },
+
+        // 逆矩阵
+        "inverse": function () {
+            matrix4 = _inverse_matrix(matrix4);
+            return matrix4Obj;
+        },
+
         // 对一个坐标应用变换
         // 齐次坐标(x,y,z,w)
         "use": function (x, y, z, w) {
@@ -13394,9 +13126,12 @@ clay.Matrix4 = function (initMatrix4) {
             temp[2] = temp[2].toFixed(7);
             return temp;
         },
+
+        // 矩阵的值
         "value": function () {
             return matrix4;
         }
+
     };
 
     return matrix4Obj;
@@ -13669,703 +13404,6 @@ clay.scale = function (cx, cy, times, x, y) {
     ];
 };
 
-// 绘图方法挂载钩子
-clay.svg = {};
-clay.canvas = {};
-
-// 基本的canvas对象
-// config采用canvas设置属性的api
-// 前二个参数不是必输项
-// 绘制前再提供下面提供的方法设置也是可以的
-// 第三个参数代表图形绘制控制方法
-// 最后一个是配置给控制方法的参数
-var _canvas = function (_selector, config, painterback, param) {
-
-    var key, temp = painterback(param);
-    temp._p = _getCanvas2D(_selector);
-
-    if (config)
-        for (key in config)
-            temp._p[key] = config[key];
-
-    // 设置画笔
-    temp.painter = function (selector) {
-        temp._p = _getCanvas2D(selector);
-        return temp;
-    };
-
-    // 配置画笔
-    temp.config = function (_config) {
-        for (key in _config)
-            temp._p[key] = _config[key];
-        return temp;
-    };
-
-    return temp;
-
-};
-
-// 弧
-var _arc = function (painter) {
-
-    var scope = {
-        c: [0, 0],
-        r: [100, 140],
-        t: []
-    };
-
-    // r1和r2，内半径和外半径
-    // beginA起点弧度，rotateA旋转弧度式
-    var arc = function (beginA, rotateA, r1, r2) {
-        if (rotateA > Math.PI * 2) rotateA = Math.PI * 2;
-        if (rotateA < -Math.PI * 2) rotateA = -Math.PI * 2;
-
-        // 保证逆时针也是可以的
-        if (rotateA < 0) {
-            beginA += rotateA;
-            rotateA *= -1;
-        }
-
-        if (typeof r1 !== 'number') r1 = scope.r[0];
-        if (typeof r2 !== 'number') r2 = scope.r[1];
-
-        var temp = [], p;
-
-        // 内部
-        p = _rotateZ(beginA, r1, 0, 0);
-        temp[0] = p[0];
-        temp[1] = p[1];
-        p = _rotateZ(rotateA, p[0], p[1], 0);
-        temp[2] = p[0];
-        temp[3] = p[1];
-
-        // 外部
-        p = _rotateZ(beginA, r2, 0, 0);
-        temp[4] = p[0];
-        temp[5] = p[1];
-        p = _rotateZ(rotateA, p[0], p[1], 0);
-        temp[6] = p[0];
-        temp[7] = p[1];
-
-        return painter(
-            scope.c[0], scope.c[1],
-            r1, r2,
-            beginA, beginA + rotateA,
-            temp[0] + scope.c[0], temp[1] + scope.c[1],
-            temp[4] + scope.c[0], temp[5] + scope.c[1],
-            temp[2] + scope.c[0], temp[3] + scope.c[1],
-            temp[6] + scope.c[0], temp[7] + scope.c[1],
-            scope.t, (r2 - r1) * 0.5
-        );
-    };
-
-    // 设置内外半径
-    arc.setRadius = function (r1, r2) {
-        scope.r = [r1, r2];
-        return arc;
-    };
-
-    // 设置弧中心
-    arc.setCenter = function (x, y) {
-        scope.c = [x, y];
-        return arc;
-    };
-
-    // 设置起点和终点样式
-    arc.lineCap = function (beginCircle, endCircle) {
-        scope.t = [beginCircle, endCircle];
-        return arc;
-    };
-
-    return arc;
-
-};
-
-// 采用SVG绘制圆弧
-clay.svg.arc = function () {
-    return _arc(
-        function (
-            cx, cy,
-            rmin, rmax,
-            beginA, endA,
-            begInnerX, begInnerY,
-            begOuterX, begOuterY,
-            endInnerX, endInnerY,
-            endOuterX, endOuterY,
-            t, r
-        ) {
-            var f = (endA - beginA) > Math.PI ? 1 : 0,
-                d = "M" + begInnerX + " " + begInnerY;
-            if (r < 0) r = -r;
-            d +=
-                // 横半径 竖半径 x轴偏移角度 0小弧/1大弧 0逆时针/1顺时针 终点x 终点y
-                "A" + rmin + " " + rmin + " 0 " + f + " 1 " + endInnerX + " " + endInnerY;
-            // 结尾
-            if (!t[1])
-                d += "L" + endOuterX + " " + endOuterY;
-            else
-                d += "A" + r + " " + r + " " + " 0 1 0 " + endOuterX + " " + endOuterY;
-            d += "A" + rmax + " " + rmax + " 0 " + f + " 0 " + begOuterX + " " + begOuterY;
-            // 开头
-            if (!t[0])
-                d += "L" + begInnerX + " " + begInnerY;
-            else
-                d += "A" + r + " " + r + " " + " 0 1 0 " + begInnerX + " " + begInnerY;
-            return d;
-        }
-    );
-};
-
-// 采用Canvas绘制圆弧
-clay.canvas.arc = function (selector, config) {
-
-    var key,
-        obj =
-            // 返回画扇形图的流程控制函数
-            // 并且返回的函数挂载了canvas特有的方法和属性
-            // 因此称之为基本的canvas对象
-            _canvas(selector, config, _arc, function (
-                cx, cy,
-                rmin, rmax,
-                beginA, endA,
-                begInnerX, begInnerY,
-                begOuterX, begOuterY,
-                endInnerX, endInnerY,
-                endOuterX, endOuterY,
-                t, r
-            ) {
-                if (r < 0) r = -r;
-                obj._p.beginPath();
-                obj._p.moveTo(begInnerX, begInnerY);
-                obj._p.arc(
-                    // (圆心x，圆心y，半径，开始角度，结束角度，true逆时针/false顺时针)
-                    cx, cy, rmin, beginA, endA, false);
-                // 结尾
-                if (!t[1])
-                    obj._p.lineTo(endOuterX, endOuterY);
-                else
-                    obj._p.arc((endInnerX + endOuterX) * 0.5, (endInnerY + endOuterY) * 0.5, r, endA - Math.PI, endA, true);
-                obj._p.arc(cx, cy, rmax, endA, beginA, true);
-                // 开头
-                if (!t[0])
-                    obj._p.lineTo(begInnerX, begInnerY);
-                else
-                    obj._p.arc((begInnerX + begOuterX) * 0.5, (begInnerY + begOuterY) * 0.5, r, beginA, beginA - Math.PI, true);
-                return obj._p;
-
-            });
-
-    return obj;
-
-};
-
-// 矩形
-var _rect = function (painter) {
-
-    var scope = {
-        s: 10,
-        t: ["LR"]
-    };
-
-    /**
-     * 绘制矩形
-     * @param {number} x 矩形起点的x坐标
-     * @param {number} y 矩形起点的y坐标
-     * @param {number} length 矩形长度
-     * @param {number} deg 只有在使用旋转定位的时候才需要传递，表示旋转角度
-     */
-    var rect = function (x, y, length, deg) {
-        // 记录矩形的四个角坐标
-        var position, s2 = scope.s * 0.5;
-
-        var flag = scope.t[0];
-
-        // 分类前准备
-        if (scope.t[0] == "RL" || scope.t[0] == "BT") {
-            length = -length;
-            flag = {
-                "RL": "LR",
-                "BT": "TB"
-            }[scope.t[0]];
-        }
-
-        // 分类计算
-        switch (flag) {
-            case "LR":
-                position = [
-                    [x, y - s2],
-                    [x + length, y - s2],
-                    [x + length, y + s2],
-                    [x, y + s2]
-                ];
-                break;
-            case "TB":
-                position = [
-                    [x + s2, y],
-                    [x + s2, y + length],
-                    [x - s2, y + length],
-                    [x - s2, y]
-                ];
-                break;
-            default:
-                deg = deg || 0;
-                position = [
-                    clay.rotate(scope.t[1], scope.t[2], deg + scope.t[0], x, y - s2),
-                    clay.rotate(scope.t[1], scope.t[2], deg + scope.t[0], x + length, y - s2),
-                    clay.rotate(scope.t[1], scope.t[2], deg + scope.t[0], x + length, y + s2),
-                    clay.rotate(scope.t[1], scope.t[2], deg + scope.t[0], x, y + s2)
-                ];
-        }
-        return painter(position);
-    };
-
-    // 设置矩形木棒的粗细
-    rect.setSize = function (size) {
-        scope.s = size;
-        return rect;
-    };
-
-    // 设置矩形方向类型
-    // 可以设置参数：
-    // 1.垂直或水平 "LR"、"RL"、"TB"、"BT"
-    // 2.任意角度 (deg,cx,cy)，deg表示初始角度，(cx,cy)表示旋转圆心
-    rect.setType = function (type, cx, cy) {
-        scope.t = [type, cx, cy];
-        return rect;
-    };
-
-    return rect;
-
-};
-
-// 采用SVG绘制矩形
-clay.svg.rect = function () {
-    return _rect(
-        function (p) {
-            return "M" + p[0][0] + "," + p[0][1] + " " +
-                "L" + p[1][0] + "," + p[1][1] + " " +
-                "L" + p[2][0] + "," + p[2][1] + " " +
-                "L" + p[3][0] + "," + p[3][1] + " " +
-                "L" + p[0][0] + "," + p[0][1] + " ";
-        }
-    );
-};
-
-// 采用Canvas绘制矩形
-clay.canvas.rect = function (selector, config) {
-
-    var key,
-        obj =
-            _canvas(selector, config, _rect, function (p) {
-                obj._p.beginPath();
-                obj._p.moveTo(p[0][0], p[0][1]);
-                obj._p.lineTo(p[1][0], p[1][1]);
-                obj._p.lineTo(p[2][0], p[2][1]);
-                obj._p.lineTo(p[3][0], p[3][1]);
-                obj._p.lineTo(p[0][0], p[0][1]);
-                return obj._p;
-
-            });
-
-    return obj;
-
-};
-
-// 曲线
-var _line = function (painter) {
-
-    var scope = {
-        d: 5
-    },
-        hermite = clay.hermite().setU(-1);
-
-    /**
-     * 绘制曲线
-     */
-    var line = function (points) {
-        var i = 0, temp = "M" + points[0][0] + "," + points[0][1];
-        var l, r;
-        for (; i < points.length - 1; i++) {
-            l = i == 0 ? 0 : i - 1;
-            r = i == points.length - 2 ? points.length - 1 : i + 2;
-            hermite.setP(
-                points[i][0], points[i][1],
-                points[i + 1][0], points[i + 1][1],
-                (points[i + 1][1] - points[l][1]) / (points[i + 1][0] - points[l][0]),
-                (points[r][1] - points[i][1]) / (points[r][0] - points[i][0])
-            );
-            temp = painter(hermite, points[i][0], points[i + 1][0], temp, scope.d);
-        }
-        return temp;
-    };
-
-    // 设置精度
-    line.setPrecision = function (dis) {
-        scope.d = dis;
-        return line;
-    };
-
-    // 设置张弛系数
-    line.setU = function (u) {
-        hermite.setU(u);
-        return line;
-    };
-
-    return line;
-
-};
-
-// 采用SVG绘制曲线
-clay.svg.line = function () {
-    return _line(
-        function (
-            hermite, bx, ex, d, dis
-        ) {
-            for (; bx < ex; bx += dis)
-                d = d + " L" + bx + "," + hermite(bx);
-            d = d + " L" + ex + "," + hermite(ex);
-            return d;
-        }
-    );
-};
-
-// 采用Canvas绘制曲线
-clay.canvas.line = function (selector, config) {
-    var key,
-        obj =
-            _canvas(selector, config, _line, function (
-                hermite, bx, ex, flag, dis
-            ) {
-                if (typeof flag == 'string') {
-                    obj._p.beginPath();
-                    obj._p.moveTo(bx, hermite(bx));
-                }
-                for (; bx < ex; bx += dis)
-                    obj._p.lineTo(bx, hermite(bx));
-                obj._p.lineTo(ex, hermite(ex));
-                return obj._p;
-            });
-    return obj;
-};
-
-// 文字
-var _text = function (painter) {
-
-    var scope = {
-        p: []
-    };
-
-    /**
-     * 绘制文字
-     * @param {number} x 文字坐标
-     * @param {number} y
-     * @param {string|number} text 绘制的文字
-     */
-    var text = function (x, y, text, deg) {
-        deg = !deg ? 0 : deg;
-        return painter(x, y, text, deg, scope.p[0], scope.p[1], scope.c || "#000", scope.s || 16);
-    };
-
-    // 设置对齐方式
-    text.setAlign = function (horizontal, vertical) {
-        scope.p = [horizontal, vertical];
-        return text;
-    };
-
-    // 设置字体大小
-    text.setSize = function (size) {
-        scope.s = size;
-        return text;
-    };
-
-    // 设置字颜色
-    text.setColor = function (color) {
-        scope.c = color;
-        return text;
-    };
-
-    return text;
-
-};
-
-// 采用SVG绘制文字
-clay.svg.text = function () {
-    return _text(
-        function (
-            x, y, text, deg, horizontal, vertical, color, fontSize
-        ) {
-
-            // 针对IE和edge特殊计算
-            if (_browser == 'IE' || _browser == 'Edge') {
-                if (vertical == "top") {
-                    y += fontSize;
-                }
-                if (vertical == "middle") {
-                    y += fontSize * 0.5;
-                }
-            }
-
-            var rotate = !deg ? "" : "transform='rotate(" + (deg * 180 / Math.PI) + "," + x + "," + y + ")'";
-            return clay('<text fill=' + color + ' x="' + x + '" y="' + y + '" ' + rotate + '>' + text + '</text>').css({
-                // 文本水平
-                "text-anchor": {
-                    "left": "start",
-                    "right": "end"
-                }[horizontal] || "middle",
-                // 本垂直
-                "dominant-baseline": {
-                    "top": "text-before-edge",
-                    "bottom": {
-                        "Safari": "auto"
-                    }[_browser] ||
-                        "ideographic"
-                }[vertical] ||
-                    {
-                        "Firefox": "middle"
-                    }[_browser] ||
-                    "central",
-                "font-size": fontSize + "px",
-                "font-family": "sans-serif"
-            });
-        }
-    );
-};
-
-// 采用Canvas绘制文字
-clay.canvas.text = function (selector, config) {
-
-    var key,
-        obj =
-            _canvas(selector, config, _text, function (
-                x, y, text, deg, horizontal, vertical, color, fontSize
-            ) {
-
-                obj._p.save();
-                obj._p.beginPath();
-                obj._p.textAlign = {
-                    "left": "start",
-                    "right": "end"
-                }[horizontal] || "center";
-                obj._p.textBaseline = {
-                    "top": "top",
-                    "bottom": "bottom"
-                }[vertical] || "middle";
-                obj._p.font = fontSize + 'px sans-serif';//字体大小
-                obj._p.translate(x, y);
-                obj._p.rotate(deg);
-                obj._p.fillStyle = color;
-                obj._p.fillText(text, 0, 0);
-                obj._p.restore();
-                return obj._p;
-            });
-
-    return obj;
-
-};
-
-// 贝塞尔曲线
-var _bezier = function (painter) {
-
-    var scope = {},
-
-        /**
-         * 绘制贝塞尔曲线（主要是连接关系点的时候用）
-         * @param {number} bx 起点坐标(bx,by)
-         * @param {number} by
-         * @param {number} ex 终点坐标(ex,ey)
-         * @param {number} ey
-         */
-        bezier = function (bx, by, ex, ey) {
-            var bdirection, edirection;
-            if (scope.t[2] == 'normal') {
-                bdirection = [scope.t[0], scope.t[1]];
-                edirection = [-scope.t[0], -scope.t[1]];
-            } else if (scope.t[2] == 'circle') {
-                bdirection = [bx - scope.t[0], by - scope.t[1]];
-                if (
-                    (scope.t[0] - bx) * (scope.t[0] - bx) + (scope.t[1] - by) * (scope.t[1] - by) ==
-                    (scope.t[0] - ex) * (scope.t[0] - ex) + (scope.t[1] - ey) * (scope.t[1] - ey)
-                )
-                    bdirection = [scope.t[0] - bx, scope.t[1] - by];
-                else
-                    bdirection = [bx - scope.t[0], by - scope.t[1]];
-                edirection = [scope.t[0] - ex, scope.t[1] - ey];
-            } else {
-                throw new Error('Illegal type!');
-            }
-            return painter(
-                [bx, by], //起点
-                [ex, ey], //终点
-                clay.move(bdirection[0], bdirection[1], scope.l, bx, by), //起点控制点
-                clay.move(edirection[0], edirection[1], scope.l, ex, ey) //终点控制点
-            );
-        };
-
-    // 设置曲线类型，可选类型有二种：
-    // 1.type="normal",(dx,dy)是参考方向
-    // 2.type="circle",(dx,dy)是参考中心
-    // 缺省类型是"normal"
-    bezier.setType = function (dx, dy, type) {
-        if (!type) type = 'normal';
-        scope.t = [dx, dy, type];
-        return bezier;
-    };
-
-    // 设置控制把柄的长度
-    bezier.setL = function (length) {
-        scope.l = length;
-        return bezier;
-    };
-
-    return bezier;
-
-};
-
-// 采用SVG绘制贝塞尔曲线
-clay.svg.bezier = function () {
-    return _bezier(
-        function (
-            beginP, endP, beginCtrlP, endCtrlP
-        ) {
-            return "M" + beginP[0] + "," + beginP[1] + " " +
-                "C" + beginCtrlP[0] + "," + beginCtrlP[1] + " " +
-                endCtrlP[0] + "," + endCtrlP[1] + " " +
-                endP[0] + "," + endP[1];
-        }
-    );
-};
-
-// 采用Canvas绘制贝塞尔曲线
-clay.canvas.bezier = function (selector, config) {
-
-    var key,
-        obj =
-            _canvas(selector, config, _bezier, function (
-                beginP, endP, beginCtrlP, endCtrlP
-            ) {
-                obj._p.beginPath();
-                obj._p.moveTo(beginP[0], beginP[1]);
-                obj._p.bezierCurveTo(
-                    beginCtrlP[0],// 第一个贝塞尔控制点的 x 坐标
-                    beginCtrlP[1],// 第一个贝塞尔控制点的 y 坐标
-                    endCtrlP[0],// 第二个贝塞尔控制点的 x 坐标
-                    endCtrlP[1],// 第二个贝塞尔控制点的 y 坐标
-                    endP[0], endP[1]);
-                return obj._p;
-
-            });
-
-    return obj;
-
-};
-
-// 多边形
-var _polygon = function (painter) {
-
-    var scope = {
-        /*
-         * 连接两点的曲线其实使用path的多段(L x,y)拼接而成，这些x,y就是由插值算法计算得出
-         * 设置d可以设置精度，d越大，精度越高，但是相应的计算量也会增加（计算时间增加）
-         */
-        d: 100
-    };
-    // 多边形插值方法
-    if (!scope.i) var catmullRom = clay.catmullRom();
-
-    var polygon = function (point) {
-        // 原来的slice写法会阻止某些JavaScript引擎中的优化
-        // https://github.com/petkaantonov/bluebird/wiki/Optimization-killers#3-managing-arguments
-        // 替换使用apply方法实现
-        // https://www.ecma-international.org/ecma-262/6.0/#sec-function.prototype.apply
-        var p = (point.length === 1 ? [point[0]] : Array.apply(null, point));
-        p.push(p[0]);
-
-        var l = p.length;
-        //添加首尾控制点，用于绘制完整曲线
-        p.unshift(p[l - 2]);
-        p.push(p[2]);
-
-        var i = 1,
-            temp = "M" + p[1][0] + " " + p[1][1] + " ";
-        for (; i < l; i++) {
-            if (!scope.i) {
-                catmullRom.setP(p[i - 1], p[i], p[i + 1], p[i + 2]);
-                temp = painter(catmullRom, 0, 1 / scope.d, temp);
-            } else {
-                temp = painter([p[i], p[i + 1]], 0, 1 / scope.d, temp);
-            }
-        }
-        // 闭合
-        if (typeof temp == 'string') temp += " Z"; else temp.closePath();
-        return temp;
-    };
-
-    polygon.setNum = function (num) {
-        //设置精度（即将p1,p2两点间的曲线段分成的段数）
-        scope.d = num;
-        return polygon;
-    };
-
-    // 设置是否需要插值
-    polygon.noInterpolate = function (noInterpolate) {
-        scope.i = noInterpolate;
-        return polygon;
-    };
-
-    return polygon;
-
-};
-
-// 采用SVG绘制多边形
-clay.svg.polygon = function () {
-    return _polygon(
-        function (
-            calcFn, start, dx, temp
-        ) {
-            if (typeof calcFn !== 'function') {
-                temp = temp + " L" + calcFn[1][0] + "," + calcFn[1][1];
-            } else {
-                for (; start <= 1; start += dx) {
-                    var point = calcFn(start);
-                    temp = temp + " L" + point[0] + "," + point[1];
-                }
-            }
-            return temp;
-        }
-    );
-};
-
-// 采用Canvas绘制多边形
-clay.canvas.polygon = function (selector, config) {
-
-    var key,
-        obj =
-            _canvas(selector, config, _polygon, function (
-                calcFn, start, dx, temp
-            ) {
-                if (typeof calcFn !== 'function') {
-                    if (typeof temp == 'string') {
-                        obj._p.beginPath();
-                        obj._p.moveTo(calcFn[0][0], calcFn[0][1]);
-                    }
-                    obj._p.lineTo(calcFn[1][0], calcFn[1][1]);
-                } else {
-                    var point = calcFn(start);
-                    if (typeof temp == 'string') {
-                        obj._p.moveTo(point[0], point[1]);
-                    }
-                    for (; start <= 1; start += dx) {
-                        point = calcFn(start);
-                        obj._p.lineTo(point[0], point[1]);
-                    }
-                }
-                return obj._p;
-            });
-
-    return obj;
-
-};
-
 // 把着色器字符串加载成着色器对象
 var _loadShader = function (gl, type, source) {
     // 创建着色器对象
@@ -14584,56 +13622,72 @@ clay.prototype.webgl = function (opts) {
     return glObj;
 };
 
+//计算获得单位向量
+var _getUnitVector = function (x, y, z) {
+    var d = Math.sqrt(x * x + y * y + z * z);
+    return [x / d, y / d, z / d];
+},
+    //计算获得v1,v2两个向量的叉积
+    _getXMultiplyResult = function (v1, v2) {
+        return [
+            v1[1] * v2[2] - v1[2] * v2[1],
+            v1[2] * v2[0] - v1[0] * v2[2],
+            v1[0] * v2[1] - v1[1] * v2[0]
+        ];
+    };
+
 // 视图
-clay.carmera = function () {
-
-    var matrix4,
-        carmera = {
-
-            // 设置或重置观察"姿势"
-            "lookAt": function (
-                // 视点
-                eX, eY, eZ,
-                // 观察目标中心点
-                cX, cY, cZ,
-                // 上方向
-                upX, upY, upZ
-            ) {
-
-                throw new Error('温馨提示：由完成状态切回开发状态！');
-
-                // return carmera;
-            },
-
-            // 获取视图矩阵数组表示
-            "value": function () {
-                return matrix4.value();
-            }
-
-        };
-
-    return carmera;
-
-};
-
-// 一点透视
-// 物体限制在四棱锥中
-var _perspective_projection = function (
-    // 裁剪面边界
-    left, right, top, bottom,
-    // 近裁剪面和远裁剪面
-    near, far
+var _lookAt = function (
+    // 视点
+    eX, eY, eZ,
+    // 观察目标中心点
+    cX, cY, cZ,
+    // 上方向
+    upX, upY, upZ
 ) {
-    // 特别注意：求出的新坐标为（x'z,y'z,z'z,z）
-    return [
-        2 * near / (right - left), 0, 0, 0,
-        0, 2 * near / (top - bottom), 0, 0,
-        (left + right) / (left - right),
-        (bottom + top) / (bottom - top),
-        (far + near) / (near - far),
-        1,
-        0, 0, far * far * 2 / (near - far), 0
-    ];
+    eX = eX || 0; eY = eY || 0; eZ = eZ === 0 ? 0 : 1;
+    cX = cX || 0; cY = cY || 0; cZ = cZ || 0;
+    upX = upX || 0; upY = upY === 0 ? 0 : 1; upZ = upZ || 0;
+
+    if (upX === 0 && upY === 0 && upZ === 0)
+        throw new Error("The orientation above the camera cannot be a zero vector!");
+
+    if (eX === cX && eY === cY && eZ === cZ)
+        throw new Error("Viewpoint cannot coincide with target point!");
+
+    //获得相机拍摄方向的单位向量
+    var visualVector = _getUnitVector(cX - eX, cY - eY, cZ - eZ);
+    //获得上方向的单位向量
+    var upVector = _getUnitVector(upX, upY, upZ);
+    //根据visualVector和upVector叉积，求得右手螺旋定则的另一轴单位向量（x轴）
+    //visualVector X upVector
+    var xRailVector = _getXMultiplyResult(visualVector, upVector);
+    //计算该坐标系下原点位置
+    var O = [eX + visualVector[0], eY + visualVector[1], eZ + visualVector[2]];
+    /**
+     * 由此可以根据物体原坐标[OriginX,OriginY,OriginZ],计算出物体新坐标 [x,y,z] ：
+     *
+     *      i               j               k         z轴与相机拍摄方向相反，故取负号
+     *
+     * xRailVector[0]   upVector[0]   -visualVector[0]       x     OriginX     O[0]
+     * xRailVector[1]   upVector[1]   -visualVector[1]   X   y  =  OriginY  -  O[1]
+     * xRailVector[2]   upVector[2]   -visualVector[2]       z     OriginZ     O[2]
+     *
+     * 简写形式： AX=Ox-B
+     * 则         X=(A^-1)(Ox-B)
+     *
+     */
+    return clay.Matrix4([
+        xRailVector[0], xRailVector[1], xRailVector[2], 0,
+        upVector[0], upVector[1], upVector[2], 0,
+        -visualVector[0], -visualVector[1], -visualVector[2], 0,
+        0, 0, 0, 1
+    ]).inverse().multiply([
+        1, 0, 0, 0,
+        0, 1, 0, 0,
+        0, 0, 1, 0,
+        -O[0], -O[1], -O[2], 1
+    ], true).value();
 };
 
 // 正交投影
@@ -14659,54 +13713,65 @@ var _orthogonal_projection = function (
     ];
 };
 
-// 投影
-// 这里采用右手坐标系
-// https://www.codeguru.com/cpp/misc/misc/graphics/article.php/c10123/Deriving-Projection-Matrices.htm
-// -1<=x<=1
-// -1<=y<=1
-// -1<=z<=1
-clay.projection = function () {
+// 照相机
+clay.camera = function () {
 
-    var scope = {},
-        projection = function () {
-            if (scope.p) {
-                return _perspective_projection(
-                    scope.l, scope.r,
-                    scope.t, scope.b,
-                    scope.n, scope.f
-                );
-            } else {
-                return _orthogonal_projection(
-                    scope.l, scope.r,
-                    scope.t, scope.b,
-                    scope.n, scope.f
-                );
-            }
-        };
+    var scope = {};
 
-    // 设置是否采用透视（具体点，就是一点透视）
-    projection.isPerspective = function (flag) {
-        scope.p = flag;
-        return projection;
+    // 求解出最终的相机矩阵
+    var camera = function () {
+        var matrix;
+        if (scope.e && scope.c && scope.u) {
+            matrix = clay.Matrix4(_lookAt(
+                scope.e[0], scope.e[1], scope.e[2],
+                scope.c[0], scope.c[1], scope.c[2],
+                scope.u[0], scope.u[1], scope.u[2]
+            ));
+        } else {
+            matrix = clay.Matrix4();
+        }
+        if (scope.f && scope.b) {
+            matrix.multiply(_orthogonal_projection(
+                scope.b[3], scope.b[1],
+                scope.b[0], scope.b[2],
+                scope.f[0], scope.f[1]
+            ));
+        }
+        return matrix.value();
+    };
+
+    // 视点
+    camera.setEye = function (eX, eY, eZ) {
+        scope.e = [eX, eY, eZ];
+        return camera;
+    };
+
+    // 观察目标中心点
+    camera.setCenter = function (cX, cY, cZ) {
+        scope.c = [cX, cY, cZ];
+        return camera;
+    };
+
+    // 上方向
+    camera.setUp = function (upX, upY, upZ) {
+        scope.u = [upX, upY, upZ];
+        return camera;
     };
 
     // 设置裁剪面
-    projection.setFace = function (near, far) {
-        scope.n = near;
-        scope.f = far;
-        return projection;
+    camera.setFace = function (near, far) {
+        scope.f = [near, far];
+        return camera;
     };
 
     // 设置边界
-    projection.setBorder = function (top, right, bottom, left) {
-        scope.t = top;
-        scope.r = right;
-        scope.b = bottom;
-        scope.l = left;
-        return projection;
+    camera.setBorder = function (top, right, bottom, left) {
+        scope.b = [top, right, bottom, left];
+        return camera;
     };
 
-    return projection;
+    return camera;
+
 };
 
 // 灯光
@@ -15072,10 +14137,7 @@ clay.pieLayout = function () {
 
 // 可注入内部服务
 var _service = {
-    "$browser": {
-        "type": _browser,
-        "version": _IE
-    }
+
 };
 
 // 常用方法
@@ -15152,7 +14214,7 @@ clay.config = function ($provider, content) {
     return clay;
 };
 
-    clay.version = '1.6.0';
+    clay.version = '1.8.0';
     clay.author = '心叶';
     clay.email = 'yelloxing@gmail.com';
 
@@ -15162,10 +14224,10 @@ clay.config = function ($provider, content) {
 
 
 /***/ }),
-/* 16 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -15176,10 +14238,10 @@ exports.push([module.i, "\nsection > div[data-v-10787bf2] {\n  font-size: 20px;\
 
 
 /***/ }),
-/* 17 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -15190,10 +14252,10 @@ exports.push([module.i, "\narticle[data-v-4147ddbe] {\n  font-size: 16px;\n  pad
 
 
 /***/ }),
-/* 18 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(0)(false);
 // imports
 
 
@@ -15204,7 +14266,7 @@ exports.push([module.i, "\nhtml {\n  font-size: 100px;\n}\nbody {\n  margin: 0;\
 
 
 /***/ }),
-/* 19 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -15394,2293 +14456,14 @@ exports.push([module.i, "\nhtml {\n  font-size: 100px;\n}\nbody {\n  margin: 0;\
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3), __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2), __webpack_require__(3)))
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Sizzle CSS Selector Engine v2.3.3
- * https://sizzlejs.com/
- *
- * Copyright jQuery Foundation and other contributors
- * Released under the MIT license
- * http://jquery.org/license
- *
- * Date: 2016-08-08
- */
-(function( window ) {
-
-var i,
-	support,
-	Expr,
-	getText,
-	isXML,
-	tokenize,
-	compile,
-	select,
-	outermostContext,
-	sortInput,
-	hasDuplicate,
-
-	// Local document vars
-	setDocument,
-	document,
-	docElem,
-	documentIsHTML,
-	rbuggyQSA,
-	rbuggyMatches,
-	matches,
-	contains,
-
-	// Instance-specific data
-	expando = "sizzle" + 1 * new Date(),
-	preferredDoc = window.document,
-	dirruns = 0,
-	done = 0,
-	classCache = createCache(),
-	tokenCache = createCache(),
-	compilerCache = createCache(),
-	sortOrder = function( a, b ) {
-		if ( a === b ) {
-			hasDuplicate = true;
-		}
-		return 0;
-	},
-
-	// Instance methods
-	hasOwn = ({}).hasOwnProperty,
-	arr = [],
-	pop = arr.pop,
-	push_native = arr.push,
-	push = arr.push,
-	slice = arr.slice,
-	// Use a stripped-down indexOf as it's faster than native
-	// https://jsperf.com/thor-indexof-vs-for/5
-	indexOf = function( list, elem ) {
-		var i = 0,
-			len = list.length;
-		for ( ; i < len; i++ ) {
-			if ( list[i] === elem ) {
-				return i;
-			}
-		}
-		return -1;
-	},
-
-	booleans = "checked|selected|async|autofocus|autoplay|controls|defer|disabled|hidden|ismap|loop|multiple|open|readonly|required|scoped",
-
-	// Regular expressions
-
-	// http://www.w3.org/TR/css3-selectors/#whitespace
-	whitespace = "[\\x20\\t\\r\\n\\f]",
-
-	// http://www.w3.org/TR/CSS21/syndata.html#value-def-identifier
-	identifier = "(?:\\\\.|[\\w-]|[^\0-\\xa0])+",
-
-	// Attribute selectors: http://www.w3.org/TR/selectors/#attribute-selectors
-	attributes = "\\[" + whitespace + "*(" + identifier + ")(?:" + whitespace +
-		// Operator (capture 2)
-		"*([*^$|!~]?=)" + whitespace +
-		// "Attribute values must be CSS identifiers [capture 5] or strings [capture 3 or capture 4]"
-		"*(?:'((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\"|(" + identifier + "))|)" + whitespace +
-		"*\\]",
-
-	pseudos = ":(" + identifier + ")(?:\\((" +
-		// To reduce the number of selectors needing tokenize in the preFilter, prefer arguments:
-		// 1. quoted (capture 3; capture 4 or capture 5)
-		"('((?:\\\\.|[^\\\\'])*)'|\"((?:\\\\.|[^\\\\\"])*)\")|" +
-		// 2. simple (capture 6)
-		"((?:\\\\.|[^\\\\()[\\]]|" + attributes + ")*)|" +
-		// 3. anything else (capture 2)
-		".*" +
-		")\\)|)",
-
-	// Leading and non-escaped trailing whitespace, capturing some non-whitespace characters preceding the latter
-	rwhitespace = new RegExp( whitespace + "+", "g" ),
-	rtrim = new RegExp( "^" + whitespace + "+|((?:^|[^\\\\])(?:\\\\.)*)" + whitespace + "+$", "g" ),
-
-	rcomma = new RegExp( "^" + whitespace + "*," + whitespace + "*" ),
-	rcombinators = new RegExp( "^" + whitespace + "*([>+~]|" + whitespace + ")" + whitespace + "*" ),
-
-	rattributeQuotes = new RegExp( "=" + whitespace + "*([^\\]'\"]*?)" + whitespace + "*\\]", "g" ),
-
-	rpseudo = new RegExp( pseudos ),
-	ridentifier = new RegExp( "^" + identifier + "$" ),
-
-	matchExpr = {
-		"ID": new RegExp( "^#(" + identifier + ")" ),
-		"CLASS": new RegExp( "^\\.(" + identifier + ")" ),
-		"TAG": new RegExp( "^(" + identifier + "|[*])" ),
-		"ATTR": new RegExp( "^" + attributes ),
-		"PSEUDO": new RegExp( "^" + pseudos ),
-		"CHILD": new RegExp( "^:(only|first|last|nth|nth-last)-(child|of-type)(?:\\(" + whitespace +
-			"*(even|odd|(([+-]|)(\\d*)n|)" + whitespace + "*(?:([+-]|)" + whitespace +
-			"*(\\d+)|))" + whitespace + "*\\)|)", "i" ),
-		"bool": new RegExp( "^(?:" + booleans + ")$", "i" ),
-		// For use in libraries implementing .is()
-		// We use this for POS matching in `select`
-		"needsContext": new RegExp( "^" + whitespace + "*[>+~]|:(even|odd|eq|gt|lt|nth|first|last)(?:\\(" +
-			whitespace + "*((?:-\\d)?\\d*)" + whitespace + "*\\)|)(?=[^-]|$)", "i" )
-	},
-
-	rinputs = /^(?:input|select|textarea|button)$/i,
-	rheader = /^h\d$/i,
-
-	rnative = /^[^{]+\{\s*\[native \w/,
-
-	// Easily-parseable/retrievable ID or TAG or CLASS selectors
-	rquickExpr = /^(?:#([\w-]+)|(\w+)|\.([\w-]+))$/,
-
-	rsibling = /[+~]/,
-
-	// CSS escapes
-	// http://www.w3.org/TR/CSS21/syndata.html#escaped-characters
-	runescape = new RegExp( "\\\\([\\da-f]{1,6}" + whitespace + "?|(" + whitespace + ")|.)", "ig" ),
-	funescape = function( _, escaped, escapedWhitespace ) {
-		var high = "0x" + escaped - 0x10000;
-		// NaN means non-codepoint
-		// Support: Firefox<24
-		// Workaround erroneous numeric interpretation of +"0x"
-		return high !== high || escapedWhitespace ?
-			escaped :
-			high < 0 ?
-				// BMP codepoint
-				String.fromCharCode( high + 0x10000 ) :
-				// Supplemental Plane codepoint (surrogate pair)
-				String.fromCharCode( high >> 10 | 0xD800, high & 0x3FF | 0xDC00 );
-	},
-
-	// CSS string/identifier serialization
-	// https://drafts.csswg.org/cssom/#common-serializing-idioms
-	rcssescape = /([\0-\x1f\x7f]|^-?\d)|^-$|[^\0-\x1f\x7f-\uFFFF\w-]/g,
-	fcssescape = function( ch, asCodePoint ) {
-		if ( asCodePoint ) {
-
-			// U+0000 NULL becomes U+FFFD REPLACEMENT CHARACTER
-			if ( ch === "\0" ) {
-				return "\uFFFD";
-			}
-
-			// Control characters and (dependent upon position) numbers get escaped as code points
-			return ch.slice( 0, -1 ) + "\\" + ch.charCodeAt( ch.length - 1 ).toString( 16 ) + " ";
-		}
-
-		// Other potentially-special ASCII characters get backslash-escaped
-		return "\\" + ch;
-	},
-
-	// Used for iframes
-	// See setDocument()
-	// Removing the function wrapper causes a "Permission Denied"
-	// error in IE
-	unloadHandler = function() {
-		setDocument();
-	},
-
-	disabledAncestor = addCombinator(
-		function( elem ) {
-			return elem.disabled === true && ("form" in elem || "label" in elem);
-		},
-		{ dir: "parentNode", next: "legend" }
-	);
-
-// Optimize for push.apply( _, NodeList )
-try {
-	push.apply(
-		(arr = slice.call( preferredDoc.childNodes )),
-		preferredDoc.childNodes
-	);
-	// Support: Android<4.0
-	// Detect silently failing push.apply
-	arr[ preferredDoc.childNodes.length ].nodeType;
-} catch ( e ) {
-	push = { apply: arr.length ?
-
-		// Leverage slice if possible
-		function( target, els ) {
-			push_native.apply( target, slice.call(els) );
-		} :
-
-		// Support: IE<9
-		// Otherwise append directly
-		function( target, els ) {
-			var j = target.length,
-				i = 0;
-			// Can't trust NodeList.length
-			while ( (target[j++] = els[i++]) ) {}
-			target.length = j - 1;
-		}
-	};
-}
-
-function Sizzle( selector, context, results, seed ) {
-	var m, i, elem, nid, match, groups, newSelector,
-		newContext = context && context.ownerDocument,
-
-		// nodeType defaults to 9, since context defaults to document
-		nodeType = context ? context.nodeType : 9;
-
-	results = results || [];
-
-	// Return early from calls with invalid selector or context
-	if ( typeof selector !== "string" || !selector ||
-		nodeType !== 1 && nodeType !== 9 && nodeType !== 11 ) {
-
-		return results;
-	}
-
-	// Try to shortcut find operations (as opposed to filters) in HTML documents
-	if ( !seed ) {
-
-		if ( ( context ? context.ownerDocument || context : preferredDoc ) !== document ) {
-			setDocument( context );
-		}
-		context = context || document;
-
-		if ( documentIsHTML ) {
-
-			// If the selector is sufficiently simple, try using a "get*By*" DOM method
-			// (excepting DocumentFragment context, where the methods don't exist)
-			if ( nodeType !== 11 && (match = rquickExpr.exec( selector )) ) {
-
-				// ID selector
-				if ( (m = match[1]) ) {
-
-					// Document context
-					if ( nodeType === 9 ) {
-						if ( (elem = context.getElementById( m )) ) {
-
-							// Support: IE, Opera, Webkit
-							// TODO: identify versions
-							// getElementById can match elements by name instead of ID
-							if ( elem.id === m ) {
-								results.push( elem );
-								return results;
-							}
-						} else {
-							return results;
-						}
-
-					// Element context
-					} else {
-
-						// Support: IE, Opera, Webkit
-						// TODO: identify versions
-						// getElementById can match elements by name instead of ID
-						if ( newContext && (elem = newContext.getElementById( m )) &&
-							contains( context, elem ) &&
-							elem.id === m ) {
-
-							results.push( elem );
-							return results;
-						}
-					}
-
-				// Type selector
-				} else if ( match[2] ) {
-					push.apply( results, context.getElementsByTagName( selector ) );
-					return results;
-
-				// Class selector
-				} else if ( (m = match[3]) && support.getElementsByClassName &&
-					context.getElementsByClassName ) {
-
-					push.apply( results, context.getElementsByClassName( m ) );
-					return results;
-				}
-			}
-
-			// Take advantage of querySelectorAll
-			if ( support.qsa &&
-				!compilerCache[ selector + " " ] &&
-				(!rbuggyQSA || !rbuggyQSA.test( selector )) ) {
-
-				if ( nodeType !== 1 ) {
-					newContext = context;
-					newSelector = selector;
-
-				// qSA looks outside Element context, which is not what we want
-				// Thanks to Andrew Dupont for this workaround technique
-				// Support: IE <=8
-				// Exclude object elements
-				} else if ( context.nodeName.toLowerCase() !== "object" ) {
-
-					// Capture the context ID, setting it first if necessary
-					if ( (nid = context.getAttribute( "id" )) ) {
-						nid = nid.replace( rcssescape, fcssescape );
-					} else {
-						context.setAttribute( "id", (nid = expando) );
-					}
-
-					// Prefix every selector in the list
-					groups = tokenize( selector );
-					i = groups.length;
-					while ( i-- ) {
-						groups[i] = "#" + nid + " " + toSelector( groups[i] );
-					}
-					newSelector = groups.join( "," );
-
-					// Expand context for sibling selectors
-					newContext = rsibling.test( selector ) && testContext( context.parentNode ) ||
-						context;
-				}
-
-				if ( newSelector ) {
-					try {
-						push.apply( results,
-							newContext.querySelectorAll( newSelector )
-						);
-						return results;
-					} catch ( qsaError ) {
-					} finally {
-						if ( nid === expando ) {
-							context.removeAttribute( "id" );
-						}
-					}
-				}
-			}
-		}
-	}
-
-	// All others
-	return select( selector.replace( rtrim, "$1" ), context, results, seed );
-}
-
-/**
- * Create key-value caches of limited size
- * @returns {function(string, object)} Returns the Object data after storing it on itself with
- *	property name the (space-suffixed) string and (if the cache is larger than Expr.cacheLength)
- *	deleting the oldest entry
- */
-function createCache() {
-	var keys = [];
-
-	function cache( key, value ) {
-		// Use (key + " ") to avoid collision with native prototype properties (see Issue #157)
-		if ( keys.push( key + " " ) > Expr.cacheLength ) {
-			// Only keep the most recent entries
-			delete cache[ keys.shift() ];
-		}
-		return (cache[ key + " " ] = value);
-	}
-	return cache;
-}
-
-/**
- * Mark a function for special use by Sizzle
- * @param {Function} fn The function to mark
- */
-function markFunction( fn ) {
-	fn[ expando ] = true;
-	return fn;
-}
-
-/**
- * Support testing using an element
- * @param {Function} fn Passed the created element and returns a boolean result
- */
-function assert( fn ) {
-	var el = document.createElement("fieldset");
-
-	try {
-		return !!fn( el );
-	} catch (e) {
-		return false;
-	} finally {
-		// Remove from its parent by default
-		if ( el.parentNode ) {
-			el.parentNode.removeChild( el );
-		}
-		// release memory in IE
-		el = null;
-	}
-}
-
-/**
- * Adds the same handler for all of the specified attrs
- * @param {String} attrs Pipe-separated list of attributes
- * @param {Function} handler The method that will be applied
- */
-function addHandle( attrs, handler ) {
-	var arr = attrs.split("|"),
-		i = arr.length;
-
-	while ( i-- ) {
-		Expr.attrHandle[ arr[i] ] = handler;
-	}
-}
-
-/**
- * Checks document order of two siblings
- * @param {Element} a
- * @param {Element} b
- * @returns {Number} Returns less than 0 if a precedes b, greater than 0 if a follows b
- */
-function siblingCheck( a, b ) {
-	var cur = b && a,
-		diff = cur && a.nodeType === 1 && b.nodeType === 1 &&
-			a.sourceIndex - b.sourceIndex;
-
-	// Use IE sourceIndex if available on both nodes
-	if ( diff ) {
-		return diff;
-	}
-
-	// Check if b follows a
-	if ( cur ) {
-		while ( (cur = cur.nextSibling) ) {
-			if ( cur === b ) {
-				return -1;
-			}
-		}
-	}
-
-	return a ? 1 : -1;
-}
-
-/**
- * Returns a function to use in pseudos for input types
- * @param {String} type
- */
-function createInputPseudo( type ) {
-	return function( elem ) {
-		var name = elem.nodeName.toLowerCase();
-		return name === "input" && elem.type === type;
-	};
-}
-
-/**
- * Returns a function to use in pseudos for buttons
- * @param {String} type
- */
-function createButtonPseudo( type ) {
-	return function( elem ) {
-		var name = elem.nodeName.toLowerCase();
-		return (name === "input" || name === "button") && elem.type === type;
-	};
-}
-
-/**
- * Returns a function to use in pseudos for :enabled/:disabled
- * @param {Boolean} disabled true for :disabled; false for :enabled
- */
-function createDisabledPseudo( disabled ) {
-
-	// Known :disabled false positives: fieldset[disabled] > legend:nth-of-type(n+2) :can-disable
-	return function( elem ) {
-
-		// Only certain elements can match :enabled or :disabled
-		// https://html.spec.whatwg.org/multipage/scripting.html#selector-enabled
-		// https://html.spec.whatwg.org/multipage/scripting.html#selector-disabled
-		if ( "form" in elem ) {
-
-			// Check for inherited disabledness on relevant non-disabled elements:
-			// * listed form-associated elements in a disabled fieldset
-			//   https://html.spec.whatwg.org/multipage/forms.html#category-listed
-			//   https://html.spec.whatwg.org/multipage/forms.html#concept-fe-disabled
-			// * option elements in a disabled optgroup
-			//   https://html.spec.whatwg.org/multipage/forms.html#concept-option-disabled
-			// All such elements have a "form" property.
-			if ( elem.parentNode && elem.disabled === false ) {
-
-				// Option elements defer to a parent optgroup if present
-				if ( "label" in elem ) {
-					if ( "label" in elem.parentNode ) {
-						return elem.parentNode.disabled === disabled;
-					} else {
-						return elem.disabled === disabled;
-					}
-				}
-
-				// Support: IE 6 - 11
-				// Use the isDisabled shortcut property to check for disabled fieldset ancestors
-				return elem.isDisabled === disabled ||
-
-					// Where there is no isDisabled, check manually
-					/* jshint -W018 */
-					elem.isDisabled !== !disabled &&
-						disabledAncestor( elem ) === disabled;
-			}
-
-			return elem.disabled === disabled;
-
-		// Try to winnow out elements that can't be disabled before trusting the disabled property.
-		// Some victims get caught in our net (label, legend, menu, track), but it shouldn't
-		// even exist on them, let alone have a boolean value.
-		} else if ( "label" in elem ) {
-			return elem.disabled === disabled;
-		}
-
-		// Remaining elements are neither :enabled nor :disabled
-		return false;
-	};
-}
-
-/**
- * Returns a function to use in pseudos for positionals
- * @param {Function} fn
- */
-function createPositionalPseudo( fn ) {
-	return markFunction(function( argument ) {
-		argument = +argument;
-		return markFunction(function( seed, matches ) {
-			var j,
-				matchIndexes = fn( [], seed.length, argument ),
-				i = matchIndexes.length;
-
-			// Match elements found at the specified indexes
-			while ( i-- ) {
-				if ( seed[ (j = matchIndexes[i]) ] ) {
-					seed[j] = !(matches[j] = seed[j]);
-				}
-			}
-		});
-	});
-}
-
-/**
- * Checks a node for validity as a Sizzle context
- * @param {Element|Object=} context
- * @returns {Element|Object|Boolean} The input node if acceptable, otherwise a falsy value
- */
-function testContext( context ) {
-	return context && typeof context.getElementsByTagName !== "undefined" && context;
-}
-
-// Expose support vars for convenience
-support = Sizzle.support = {};
-
-/**
- * Detects XML nodes
- * @param {Element|Object} elem An element or a document
- * @returns {Boolean} True iff elem is a non-HTML XML node
- */
-isXML = Sizzle.isXML = function( elem ) {
-	// documentElement is verified for cases where it doesn't yet exist
-	// (such as loading iframes in IE - #4833)
-	var documentElement = elem && (elem.ownerDocument || elem).documentElement;
-	return documentElement ? documentElement.nodeName !== "HTML" : false;
-};
-
-/**
- * Sets document-related variables once based on the current document
- * @param {Element|Object} [doc] An element or document object to use to set the document
- * @returns {Object} Returns the current document
- */
-setDocument = Sizzle.setDocument = function( node ) {
-	var hasCompare, subWindow,
-		doc = node ? node.ownerDocument || node : preferredDoc;
-
-	// Return early if doc is invalid or already selected
-	if ( doc === document || doc.nodeType !== 9 || !doc.documentElement ) {
-		return document;
-	}
-
-	// Update global variables
-	document = doc;
-	docElem = document.documentElement;
-	documentIsHTML = !isXML( document );
-
-	// Support: IE 9-11, Edge
-	// Accessing iframe documents after unload throws "permission denied" errors (jQuery #13936)
-	if ( preferredDoc !== document &&
-		(subWindow = document.defaultView) && subWindow.top !== subWindow ) {
-
-		// Support: IE 11, Edge
-		if ( subWindow.addEventListener ) {
-			subWindow.addEventListener( "unload", unloadHandler, false );
-
-		// Support: IE 9 - 10 only
-		} else if ( subWindow.attachEvent ) {
-			subWindow.attachEvent( "onunload", unloadHandler );
-		}
-	}
-
-	/* Attributes
-	---------------------------------------------------------------------- */
-
-	// Support: IE<8
-	// Verify that getAttribute really returns attributes and not properties
-	// (excepting IE8 booleans)
-	support.attributes = assert(function( el ) {
-		el.className = "i";
-		return !el.getAttribute("className");
-	});
-
-	/* getElement(s)By*
-	---------------------------------------------------------------------- */
-
-	// Check if getElementsByTagName("*") returns only elements
-	support.getElementsByTagName = assert(function( el ) {
-		el.appendChild( document.createComment("") );
-		return !el.getElementsByTagName("*").length;
-	});
-
-	// Support: IE<9
-	support.getElementsByClassName = rnative.test( document.getElementsByClassName );
-
-	// Support: IE<10
-	// Check if getElementById returns elements by name
-	// The broken getElementById methods don't pick up programmatically-set names,
-	// so use a roundabout getElementsByName test
-	support.getById = assert(function( el ) {
-		docElem.appendChild( el ).id = expando;
-		return !document.getElementsByName || !document.getElementsByName( expando ).length;
-	});
-
-	// ID filter and find
-	if ( support.getById ) {
-		Expr.filter["ID"] = function( id ) {
-			var attrId = id.replace( runescape, funescape );
-			return function( elem ) {
-				return elem.getAttribute("id") === attrId;
-			};
-		};
-		Expr.find["ID"] = function( id, context ) {
-			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
-				var elem = context.getElementById( id );
-				return elem ? [ elem ] : [];
-			}
-		};
-	} else {
-		Expr.filter["ID"] =  function( id ) {
-			var attrId = id.replace( runescape, funescape );
-			return function( elem ) {
-				var node = typeof elem.getAttributeNode !== "undefined" &&
-					elem.getAttributeNode("id");
-				return node && node.value === attrId;
-			};
-		};
-
-		// Support: IE 6 - 7 only
-		// getElementById is not reliable as a find shortcut
-		Expr.find["ID"] = function( id, context ) {
-			if ( typeof context.getElementById !== "undefined" && documentIsHTML ) {
-				var node, i, elems,
-					elem = context.getElementById( id );
-
-				if ( elem ) {
-
-					// Verify the id attribute
-					node = elem.getAttributeNode("id");
-					if ( node && node.value === id ) {
-						return [ elem ];
-					}
-
-					// Fall back on getElementsByName
-					elems = context.getElementsByName( id );
-					i = 0;
-					while ( (elem = elems[i++]) ) {
-						node = elem.getAttributeNode("id");
-						if ( node && node.value === id ) {
-							return [ elem ];
-						}
-					}
-				}
-
-				return [];
-			}
-		};
-	}
-
-	// Tag
-	Expr.find["TAG"] = support.getElementsByTagName ?
-		function( tag, context ) {
-			if ( typeof context.getElementsByTagName !== "undefined" ) {
-				return context.getElementsByTagName( tag );
-
-			// DocumentFragment nodes don't have gEBTN
-			} else if ( support.qsa ) {
-				return context.querySelectorAll( tag );
-			}
-		} :
-
-		function( tag, context ) {
-			var elem,
-				tmp = [],
-				i = 0,
-				// By happy coincidence, a (broken) gEBTN appears on DocumentFragment nodes too
-				results = context.getElementsByTagName( tag );
-
-			// Filter out possible comments
-			if ( tag === "*" ) {
-				while ( (elem = results[i++]) ) {
-					if ( elem.nodeType === 1 ) {
-						tmp.push( elem );
-					}
-				}
-
-				return tmp;
-			}
-			return results;
-		};
-
-	// Class
-	Expr.find["CLASS"] = support.getElementsByClassName && function( className, context ) {
-		if ( typeof context.getElementsByClassName !== "undefined" && documentIsHTML ) {
-			return context.getElementsByClassName( className );
-		}
-	};
-
-	/* QSA/matchesSelector
-	---------------------------------------------------------------------- */
-
-	// QSA and matchesSelector support
-
-	// matchesSelector(:active) reports false when true (IE9/Opera 11.5)
-	rbuggyMatches = [];
-
-	// qSa(:focus) reports false when true (Chrome 21)
-	// We allow this because of a bug in IE8/9 that throws an error
-	// whenever `document.activeElement` is accessed on an iframe
-	// So, we allow :focus to pass through QSA all the time to avoid the IE error
-	// See https://bugs.jquery.com/ticket/13378
-	rbuggyQSA = [];
-
-	if ( (support.qsa = rnative.test( document.querySelectorAll )) ) {
-		// Build QSA regex
-		// Regex strategy adopted from Diego Perini
-		assert(function( el ) {
-			// Select is set to empty string on purpose
-			// This is to test IE's treatment of not explicitly
-			// setting a boolean content attribute,
-			// since its presence should be enough
-			// https://bugs.jquery.com/ticket/12359
-			docElem.appendChild( el ).innerHTML = "<a id='" + expando + "'></a>" +
-				"<select id='" + expando + "-\r\\' msallowcapture=''>" +
-				"<option selected=''></option></select>";
-
-			// Support: IE8, Opera 11-12.16
-			// Nothing should be selected when empty strings follow ^= or $= or *=
-			// The test attribute must be unknown in Opera but "safe" for WinRT
-			// https://msdn.microsoft.com/en-us/library/ie/hh465388.aspx#attribute_section
-			if ( el.querySelectorAll("[msallowcapture^='']").length ) {
-				rbuggyQSA.push( "[*^$]=" + whitespace + "*(?:''|\"\")" );
-			}
-
-			// Support: IE8
-			// Boolean attributes and "value" are not treated correctly
-			if ( !el.querySelectorAll("[selected]").length ) {
-				rbuggyQSA.push( "\\[" + whitespace + "*(?:value|" + booleans + ")" );
-			}
-
-			// Support: Chrome<29, Android<4.4, Safari<7.0+, iOS<7.0+, PhantomJS<1.9.8+
-			if ( !el.querySelectorAll( "[id~=" + expando + "-]" ).length ) {
-				rbuggyQSA.push("~=");
-			}
-
-			// Webkit/Opera - :checked should return selected option elements
-			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			// IE8 throws error here and will not see later tests
-			if ( !el.querySelectorAll(":checked").length ) {
-				rbuggyQSA.push(":checked");
-			}
-
-			// Support: Safari 8+, iOS 8+
-			// https://bugs.webkit.org/show_bug.cgi?id=136851
-			// In-page `selector#id sibling-combinator selector` fails
-			if ( !el.querySelectorAll( "a#" + expando + "+*" ).length ) {
-				rbuggyQSA.push(".#.+[+~]");
-			}
-		});
-
-		assert(function( el ) {
-			el.innerHTML = "<a href='' disabled='disabled'></a>" +
-				"<select disabled='disabled'><option/></select>";
-
-			// Support: Windows 8 Native Apps
-			// The type and name attributes are restricted during .innerHTML assignment
-			var input = document.createElement("input");
-			input.setAttribute( "type", "hidden" );
-			el.appendChild( input ).setAttribute( "name", "D" );
-
-			// Support: IE8
-			// Enforce case-sensitivity of name attribute
-			if ( el.querySelectorAll("[name=d]").length ) {
-				rbuggyQSA.push( "name" + whitespace + "*[*^$|!~]?=" );
-			}
-
-			// FF 3.5 - :enabled/:disabled and hidden elements (hidden elements are still enabled)
-			// IE8 throws error here and will not see later tests
-			if ( el.querySelectorAll(":enabled").length !== 2 ) {
-				rbuggyQSA.push( ":enabled", ":disabled" );
-			}
-
-			// Support: IE9-11+
-			// IE's :disabled selector does not pick up the children of disabled fieldsets
-			docElem.appendChild( el ).disabled = true;
-			if ( el.querySelectorAll(":disabled").length !== 2 ) {
-				rbuggyQSA.push( ":enabled", ":disabled" );
-			}
-
-			// Opera 10-11 does not throw on post-comma invalid pseudos
-			el.querySelectorAll("*,:x");
-			rbuggyQSA.push(",.*:");
-		});
-	}
-
-	if ( (support.matchesSelector = rnative.test( (matches = docElem.matches ||
-		docElem.webkitMatchesSelector ||
-		docElem.mozMatchesSelector ||
-		docElem.oMatchesSelector ||
-		docElem.msMatchesSelector) )) ) {
-
-		assert(function( el ) {
-			// Check to see if it's possible to do matchesSelector
-			// on a disconnected node (IE 9)
-			support.disconnectedMatch = matches.call( el, "*" );
-
-			// This should fail with an exception
-			// Gecko does not error, returns false instead
-			matches.call( el, "[s!='']:x" );
-			rbuggyMatches.push( "!=", pseudos );
-		});
-	}
-
-	rbuggyQSA = rbuggyQSA.length && new RegExp( rbuggyQSA.join("|") );
-	rbuggyMatches = rbuggyMatches.length && new RegExp( rbuggyMatches.join("|") );
-
-	/* Contains
-	---------------------------------------------------------------------- */
-	hasCompare = rnative.test( docElem.compareDocumentPosition );
-
-	// Element contains another
-	// Purposefully self-exclusive
-	// As in, an element does not contain itself
-	contains = hasCompare || rnative.test( docElem.contains ) ?
-		function( a, b ) {
-			var adown = a.nodeType === 9 ? a.documentElement : a,
-				bup = b && b.parentNode;
-			return a === bup || !!( bup && bup.nodeType === 1 && (
-				adown.contains ?
-					adown.contains( bup ) :
-					a.compareDocumentPosition && a.compareDocumentPosition( bup ) & 16
-			));
-		} :
-		function( a, b ) {
-			if ( b ) {
-				while ( (b = b.parentNode) ) {
-					if ( b === a ) {
-						return true;
-					}
-				}
-			}
-			return false;
-		};
-
-	/* Sorting
-	---------------------------------------------------------------------- */
-
-	// Document order sorting
-	sortOrder = hasCompare ?
-	function( a, b ) {
-
-		// Flag for duplicate removal
-		if ( a === b ) {
-			hasDuplicate = true;
-			return 0;
-		}
-
-		// Sort on method existence if only one input has compareDocumentPosition
-		var compare = !a.compareDocumentPosition - !b.compareDocumentPosition;
-		if ( compare ) {
-			return compare;
-		}
-
-		// Calculate position if both inputs belong to the same document
-		compare = ( a.ownerDocument || a ) === ( b.ownerDocument || b ) ?
-			a.compareDocumentPosition( b ) :
-
-			// Otherwise we know they are disconnected
-			1;
-
-		// Disconnected nodes
-		if ( compare & 1 ||
-			(!support.sortDetached && b.compareDocumentPosition( a ) === compare) ) {
-
-			// Choose the first element that is related to our preferred document
-			if ( a === document || a.ownerDocument === preferredDoc && contains(preferredDoc, a) ) {
-				return -1;
-			}
-			if ( b === document || b.ownerDocument === preferredDoc && contains(preferredDoc, b) ) {
-				return 1;
-			}
-
-			// Maintain original order
-			return sortInput ?
-				( indexOf( sortInput, a ) - indexOf( sortInput, b ) ) :
-				0;
-		}
-
-		return compare & 4 ? -1 : 1;
-	} :
-	function( a, b ) {
-		// Exit early if the nodes are identical
-		if ( a === b ) {
-			hasDuplicate = true;
-			return 0;
-		}
-
-		var cur,
-			i = 0,
-			aup = a.parentNode,
-			bup = b.parentNode,
-			ap = [ a ],
-			bp = [ b ];
-
-		// Parentless nodes are either documents or disconnected
-		if ( !aup || !bup ) {
-			return a === document ? -1 :
-				b === document ? 1 :
-				aup ? -1 :
-				bup ? 1 :
-				sortInput ?
-				( indexOf( sortInput, a ) - indexOf( sortInput, b ) ) :
-				0;
-
-		// If the nodes are siblings, we can do a quick check
-		} else if ( aup === bup ) {
-			return siblingCheck( a, b );
-		}
-
-		// Otherwise we need full lists of their ancestors for comparison
-		cur = a;
-		while ( (cur = cur.parentNode) ) {
-			ap.unshift( cur );
-		}
-		cur = b;
-		while ( (cur = cur.parentNode) ) {
-			bp.unshift( cur );
-		}
-
-		// Walk down the tree looking for a discrepancy
-		while ( ap[i] === bp[i] ) {
-			i++;
-		}
-
-		return i ?
-			// Do a sibling check if the nodes have a common ancestor
-			siblingCheck( ap[i], bp[i] ) :
-
-			// Otherwise nodes in our document sort first
-			ap[i] === preferredDoc ? -1 :
-			bp[i] === preferredDoc ? 1 :
-			0;
-	};
-
-	return document;
-};
-
-Sizzle.matches = function( expr, elements ) {
-	return Sizzle( expr, null, null, elements );
-};
-
-Sizzle.matchesSelector = function( elem, expr ) {
-	// Set document vars if needed
-	if ( ( elem.ownerDocument || elem ) !== document ) {
-		setDocument( elem );
-	}
-
-	// Make sure that attribute selectors are quoted
-	expr = expr.replace( rattributeQuotes, "='$1']" );
-
-	if ( support.matchesSelector && documentIsHTML &&
-		!compilerCache[ expr + " " ] &&
-		( !rbuggyMatches || !rbuggyMatches.test( expr ) ) &&
-		( !rbuggyQSA     || !rbuggyQSA.test( expr ) ) ) {
-
-		try {
-			var ret = matches.call( elem, expr );
-
-			// IE 9's matchesSelector returns false on disconnected nodes
-			if ( ret || support.disconnectedMatch ||
-					// As well, disconnected nodes are said to be in a document
-					// fragment in IE 9
-					elem.document && elem.document.nodeType !== 11 ) {
-				return ret;
-			}
-		} catch (e) {}
-	}
-
-	return Sizzle( expr, document, null, [ elem ] ).length > 0;
-};
-
-Sizzle.contains = function( context, elem ) {
-	// Set document vars if needed
-	if ( ( context.ownerDocument || context ) !== document ) {
-		setDocument( context );
-	}
-	return contains( context, elem );
-};
-
-Sizzle.attr = function( elem, name ) {
-	// Set document vars if needed
-	if ( ( elem.ownerDocument || elem ) !== document ) {
-		setDocument( elem );
-	}
-
-	var fn = Expr.attrHandle[ name.toLowerCase() ],
-		// Don't get fooled by Object.prototype properties (jQuery #13807)
-		val = fn && hasOwn.call( Expr.attrHandle, name.toLowerCase() ) ?
-			fn( elem, name, !documentIsHTML ) :
-			undefined;
-
-	return val !== undefined ?
-		val :
-		support.attributes || !documentIsHTML ?
-			elem.getAttribute( name ) :
-			(val = elem.getAttributeNode(name)) && val.specified ?
-				val.value :
-				null;
-};
-
-Sizzle.escape = function( sel ) {
-	return (sel + "").replace( rcssescape, fcssescape );
-};
-
-Sizzle.error = function( msg ) {
-	throw new Error( "Syntax error, unrecognized expression: " + msg );
-};
-
-/**
- * Document sorting and removing duplicates
- * @param {ArrayLike} results
- */
-Sizzle.uniqueSort = function( results ) {
-	var elem,
-		duplicates = [],
-		j = 0,
-		i = 0;
-
-	// Unless we *know* we can detect duplicates, assume their presence
-	hasDuplicate = !support.detectDuplicates;
-	sortInput = !support.sortStable && results.slice( 0 );
-	results.sort( sortOrder );
-
-	if ( hasDuplicate ) {
-		while ( (elem = results[i++]) ) {
-			if ( elem === results[ i ] ) {
-				j = duplicates.push( i );
-			}
-		}
-		while ( j-- ) {
-			results.splice( duplicates[ j ], 1 );
-		}
-	}
-
-	// Clear input after sorting to release objects
-	// See https://github.com/jquery/sizzle/pull/225
-	sortInput = null;
-
-	return results;
-};
-
-/**
- * Utility function for retrieving the text value of an array of DOM nodes
- * @param {Array|Element} elem
- */
-getText = Sizzle.getText = function( elem ) {
-	var node,
-		ret = "",
-		i = 0,
-		nodeType = elem.nodeType;
-
-	if ( !nodeType ) {
-		// If no nodeType, this is expected to be an array
-		while ( (node = elem[i++]) ) {
-			// Do not traverse comment nodes
-			ret += getText( node );
-		}
-	} else if ( nodeType === 1 || nodeType === 9 || nodeType === 11 ) {
-		// Use textContent for elements
-		// innerText usage removed for consistency of new lines (jQuery #11153)
-		if ( typeof elem.textContent === "string" ) {
-			return elem.textContent;
-		} else {
-			// Traverse its children
-			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
-				ret += getText( elem );
-			}
-		}
-	} else if ( nodeType === 3 || nodeType === 4 ) {
-		return elem.nodeValue;
-	}
-	// Do not include comment or processing instruction nodes
-
-	return ret;
-};
-
-Expr = Sizzle.selectors = {
-
-	// Can be adjusted by the user
-	cacheLength: 50,
-
-	createPseudo: markFunction,
-
-	match: matchExpr,
-
-	attrHandle: {},
-
-	find: {},
-
-	relative: {
-		">": { dir: "parentNode", first: true },
-		" ": { dir: "parentNode" },
-		"+": { dir: "previousSibling", first: true },
-		"~": { dir: "previousSibling" }
-	},
-
-	preFilter: {
-		"ATTR": function( match ) {
-			match[1] = match[1].replace( runescape, funescape );
-
-			// Move the given value to match[3] whether quoted or unquoted
-			match[3] = ( match[3] || match[4] || match[5] || "" ).replace( runescape, funescape );
-
-			if ( match[2] === "~=" ) {
-				match[3] = " " + match[3] + " ";
-			}
-
-			return match.slice( 0, 4 );
-		},
-
-		"CHILD": function( match ) {
-			/* matches from matchExpr["CHILD"]
-				1 type (only|nth|...)
-				2 what (child|of-type)
-				3 argument (even|odd|\d*|\d*n([+-]\d+)?|...)
-				4 xn-component of xn+y argument ([+-]?\d*n|)
-				5 sign of xn-component
-				6 x of xn-component
-				7 sign of y-component
-				8 y of y-component
-			*/
-			match[1] = match[1].toLowerCase();
-
-			if ( match[1].slice( 0, 3 ) === "nth" ) {
-				// nth-* requires argument
-				if ( !match[3] ) {
-					Sizzle.error( match[0] );
-				}
-
-				// numeric x and y parameters for Expr.filter.CHILD
-				// remember that false/true cast respectively to 0/1
-				match[4] = +( match[4] ? match[5] + (match[6] || 1) : 2 * ( match[3] === "even" || match[3] === "odd" ) );
-				match[5] = +( ( match[7] + match[8] ) || match[3] === "odd" );
-
-			// other types prohibit arguments
-			} else if ( match[3] ) {
-				Sizzle.error( match[0] );
-			}
-
-			return match;
-		},
-
-		"PSEUDO": function( match ) {
-			var excess,
-				unquoted = !match[6] && match[2];
-
-			if ( matchExpr["CHILD"].test( match[0] ) ) {
-				return null;
-			}
-
-			// Accept quoted arguments as-is
-			if ( match[3] ) {
-				match[2] = match[4] || match[5] || "";
-
-			// Strip excess characters from unquoted arguments
-			} else if ( unquoted && rpseudo.test( unquoted ) &&
-				// Get excess from tokenize (recursively)
-				(excess = tokenize( unquoted, true )) &&
-				// advance to the next closing parenthesis
-				(excess = unquoted.indexOf( ")", unquoted.length - excess ) - unquoted.length) ) {
-
-				// excess is a negative index
-				match[0] = match[0].slice( 0, excess );
-				match[2] = unquoted.slice( 0, excess );
-			}
-
-			// Return only captures needed by the pseudo filter method (type and argument)
-			return match.slice( 0, 3 );
-		}
-	},
-
-	filter: {
-
-		"TAG": function( nodeNameSelector ) {
-			var nodeName = nodeNameSelector.replace( runescape, funescape ).toLowerCase();
-			return nodeNameSelector === "*" ?
-				function() { return true; } :
-				function( elem ) {
-					return elem.nodeName && elem.nodeName.toLowerCase() === nodeName;
-				};
-		},
-
-		"CLASS": function( className ) {
-			var pattern = classCache[ className + " " ];
-
-			return pattern ||
-				(pattern = new RegExp( "(^|" + whitespace + ")" + className + "(" + whitespace + "|$)" )) &&
-				classCache( className, function( elem ) {
-					return pattern.test( typeof elem.className === "string" && elem.className || typeof elem.getAttribute !== "undefined" && elem.getAttribute("class") || "" );
-				});
-		},
-
-		"ATTR": function( name, operator, check ) {
-			return function( elem ) {
-				var result = Sizzle.attr( elem, name );
-
-				if ( result == null ) {
-					return operator === "!=";
-				}
-				if ( !operator ) {
-					return true;
-				}
-
-				result += "";
-
-				return operator === "=" ? result === check :
-					operator === "!=" ? result !== check :
-					operator === "^=" ? check && result.indexOf( check ) === 0 :
-					operator === "*=" ? check && result.indexOf( check ) > -1 :
-					operator === "$=" ? check && result.slice( -check.length ) === check :
-					operator === "~=" ? ( " " + result.replace( rwhitespace, " " ) + " " ).indexOf( check ) > -1 :
-					operator === "|=" ? result === check || result.slice( 0, check.length + 1 ) === check + "-" :
-					false;
-			};
-		},
-
-		"CHILD": function( type, what, argument, first, last ) {
-			var simple = type.slice( 0, 3 ) !== "nth",
-				forward = type.slice( -4 ) !== "last",
-				ofType = what === "of-type";
-
-			return first === 1 && last === 0 ?
-
-				// Shortcut for :nth-*(n)
-				function( elem ) {
-					return !!elem.parentNode;
-				} :
-
-				function( elem, context, xml ) {
-					var cache, uniqueCache, outerCache, node, nodeIndex, start,
-						dir = simple !== forward ? "nextSibling" : "previousSibling",
-						parent = elem.parentNode,
-						name = ofType && elem.nodeName.toLowerCase(),
-						useCache = !xml && !ofType,
-						diff = false;
-
-					if ( parent ) {
-
-						// :(first|last|only)-(child|of-type)
-						if ( simple ) {
-							while ( dir ) {
-								node = elem;
-								while ( (node = node[ dir ]) ) {
-									if ( ofType ?
-										node.nodeName.toLowerCase() === name :
-										node.nodeType === 1 ) {
-
-										return false;
-									}
-								}
-								// Reverse direction for :only-* (if we haven't yet done so)
-								start = dir = type === "only" && !start && "nextSibling";
-							}
-							return true;
-						}
-
-						start = [ forward ? parent.firstChild : parent.lastChild ];
-
-						// non-xml :nth-child(...) stores cache data on `parent`
-						if ( forward && useCache ) {
-
-							// Seek `elem` from a previously-cached index
-
-							// ...in a gzip-friendly way
-							node = parent;
-							outerCache = node[ expando ] || (node[ expando ] = {});
-
-							// Support: IE <9 only
-							// Defend against cloned attroperties (jQuery gh-1709)
-							uniqueCache = outerCache[ node.uniqueID ] ||
-								(outerCache[ node.uniqueID ] = {});
-
-							cache = uniqueCache[ type ] || [];
-							nodeIndex = cache[ 0 ] === dirruns && cache[ 1 ];
-							diff = nodeIndex && cache[ 2 ];
-							node = nodeIndex && parent.childNodes[ nodeIndex ];
-
-							while ( (node = ++nodeIndex && node && node[ dir ] ||
-
-								// Fallback to seeking `elem` from the start
-								(diff = nodeIndex = 0) || start.pop()) ) {
-
-								// When found, cache indexes on `parent` and break
-								if ( node.nodeType === 1 && ++diff && node === elem ) {
-									uniqueCache[ type ] = [ dirruns, nodeIndex, diff ];
-									break;
-								}
-							}
-
-						} else {
-							// Use previously-cached element index if available
-							if ( useCache ) {
-								// ...in a gzip-friendly way
-								node = elem;
-								outerCache = node[ expando ] || (node[ expando ] = {});
-
-								// Support: IE <9 only
-								// Defend against cloned attroperties (jQuery gh-1709)
-								uniqueCache = outerCache[ node.uniqueID ] ||
-									(outerCache[ node.uniqueID ] = {});
-
-								cache = uniqueCache[ type ] || [];
-								nodeIndex = cache[ 0 ] === dirruns && cache[ 1 ];
-								diff = nodeIndex;
-							}
-
-							// xml :nth-child(...)
-							// or :nth-last-child(...) or :nth(-last)?-of-type(...)
-							if ( diff === false ) {
-								// Use the same loop as above to seek `elem` from the start
-								while ( (node = ++nodeIndex && node && node[ dir ] ||
-									(diff = nodeIndex = 0) || start.pop()) ) {
-
-									if ( ( ofType ?
-										node.nodeName.toLowerCase() === name :
-										node.nodeType === 1 ) &&
-										++diff ) {
-
-										// Cache the index of each encountered element
-										if ( useCache ) {
-											outerCache = node[ expando ] || (node[ expando ] = {});
-
-											// Support: IE <9 only
-											// Defend against cloned attroperties (jQuery gh-1709)
-											uniqueCache = outerCache[ node.uniqueID ] ||
-												(outerCache[ node.uniqueID ] = {});
-
-											uniqueCache[ type ] = [ dirruns, diff ];
-										}
-
-										if ( node === elem ) {
-											break;
-										}
-									}
-								}
-							}
-						}
-
-						// Incorporate the offset, then check against cycle size
-						diff -= last;
-						return diff === first || ( diff % first === 0 && diff / first >= 0 );
-					}
-				};
-		},
-
-		"PSEUDO": function( pseudo, argument ) {
-			// pseudo-class names are case-insensitive
-			// http://www.w3.org/TR/selectors/#pseudo-classes
-			// Prioritize by case sensitivity in case custom pseudos are added with uppercase letters
-			// Remember that setFilters inherits from pseudos
-			var args,
-				fn = Expr.pseudos[ pseudo ] || Expr.setFilters[ pseudo.toLowerCase() ] ||
-					Sizzle.error( "unsupported pseudo: " + pseudo );
-
-			// The user may use createPseudo to indicate that
-			// arguments are needed to create the filter function
-			// just as Sizzle does
-			if ( fn[ expando ] ) {
-				return fn( argument );
-			}
-
-			// But maintain support for old signatures
-			if ( fn.length > 1 ) {
-				args = [ pseudo, pseudo, "", argument ];
-				return Expr.setFilters.hasOwnProperty( pseudo.toLowerCase() ) ?
-					markFunction(function( seed, matches ) {
-						var idx,
-							matched = fn( seed, argument ),
-							i = matched.length;
-						while ( i-- ) {
-							idx = indexOf( seed, matched[i] );
-							seed[ idx ] = !( matches[ idx ] = matched[i] );
-						}
-					}) :
-					function( elem ) {
-						return fn( elem, 0, args );
-					};
-			}
-
-			return fn;
-		}
-	},
-
-	pseudos: {
-		// Potentially complex pseudos
-		"not": markFunction(function( selector ) {
-			// Trim the selector passed to compile
-			// to avoid treating leading and trailing
-			// spaces as combinators
-			var input = [],
-				results = [],
-				matcher = compile( selector.replace( rtrim, "$1" ) );
-
-			return matcher[ expando ] ?
-				markFunction(function( seed, matches, context, xml ) {
-					var elem,
-						unmatched = matcher( seed, null, xml, [] ),
-						i = seed.length;
-
-					// Match elements unmatched by `matcher`
-					while ( i-- ) {
-						if ( (elem = unmatched[i]) ) {
-							seed[i] = !(matches[i] = elem);
-						}
-					}
-				}) :
-				function( elem, context, xml ) {
-					input[0] = elem;
-					matcher( input, null, xml, results );
-					// Don't keep the element (issue #299)
-					input[0] = null;
-					return !results.pop();
-				};
-		}),
-
-		"has": markFunction(function( selector ) {
-			return function( elem ) {
-				return Sizzle( selector, elem ).length > 0;
-			};
-		}),
-
-		"contains": markFunction(function( text ) {
-			text = text.replace( runescape, funescape );
-			return function( elem ) {
-				return ( elem.textContent || elem.innerText || getText( elem ) ).indexOf( text ) > -1;
-			};
-		}),
-
-		// "Whether an element is represented by a :lang() selector
-		// is based solely on the element's language value
-		// being equal to the identifier C,
-		// or beginning with the identifier C immediately followed by "-".
-		// The matching of C against the element's language value is performed case-insensitively.
-		// The identifier C does not have to be a valid language name."
-		// http://www.w3.org/TR/selectors/#lang-pseudo
-		"lang": markFunction( function( lang ) {
-			// lang value must be a valid identifier
-			if ( !ridentifier.test(lang || "") ) {
-				Sizzle.error( "unsupported lang: " + lang );
-			}
-			lang = lang.replace( runescape, funescape ).toLowerCase();
-			return function( elem ) {
-				var elemLang;
-				do {
-					if ( (elemLang = documentIsHTML ?
-						elem.lang :
-						elem.getAttribute("xml:lang") || elem.getAttribute("lang")) ) {
-
-						elemLang = elemLang.toLowerCase();
-						return elemLang === lang || elemLang.indexOf( lang + "-" ) === 0;
-					}
-				} while ( (elem = elem.parentNode) && elem.nodeType === 1 );
-				return false;
-			};
-		}),
-
-		// Miscellaneous
-		"target": function( elem ) {
-			var hash = window.location && window.location.hash;
-			return hash && hash.slice( 1 ) === elem.id;
-		},
-
-		"root": function( elem ) {
-			return elem === docElem;
-		},
-
-		"focus": function( elem ) {
-			return elem === document.activeElement && (!document.hasFocus || document.hasFocus()) && !!(elem.type || elem.href || ~elem.tabIndex);
-		},
-
-		// Boolean properties
-		"enabled": createDisabledPseudo( false ),
-		"disabled": createDisabledPseudo( true ),
-
-		"checked": function( elem ) {
-			// In CSS3, :checked should return both checked and selected elements
-			// http://www.w3.org/TR/2011/REC-css3-selectors-20110929/#checked
-			var nodeName = elem.nodeName.toLowerCase();
-			return (nodeName === "input" && !!elem.checked) || (nodeName === "option" && !!elem.selected);
-		},
-
-		"selected": function( elem ) {
-			// Accessing this property makes selected-by-default
-			// options in Safari work properly
-			if ( elem.parentNode ) {
-				elem.parentNode.selectedIndex;
-			}
-
-			return elem.selected === true;
-		},
-
-		// Contents
-		"empty": function( elem ) {
-			// http://www.w3.org/TR/selectors/#empty-pseudo
-			// :empty is negated by element (1) or content nodes (text: 3; cdata: 4; entity ref: 5),
-			//   but not by others (comment: 8; processing instruction: 7; etc.)
-			// nodeType < 6 works because attributes (2) do not appear as children
-			for ( elem = elem.firstChild; elem; elem = elem.nextSibling ) {
-				if ( elem.nodeType < 6 ) {
-					return false;
-				}
-			}
-			return true;
-		},
-
-		"parent": function( elem ) {
-			return !Expr.pseudos["empty"]( elem );
-		},
-
-		// Element/input types
-		"header": function( elem ) {
-			return rheader.test( elem.nodeName );
-		},
-
-		"input": function( elem ) {
-			return rinputs.test( elem.nodeName );
-		},
-
-		"button": function( elem ) {
-			var name = elem.nodeName.toLowerCase();
-			return name === "input" && elem.type === "button" || name === "button";
-		},
-
-		"text": function( elem ) {
-			var attr;
-			return elem.nodeName.toLowerCase() === "input" &&
-				elem.type === "text" &&
-
-				// Support: IE<8
-				// New HTML5 attribute values (e.g., "search") appear with elem.type === "text"
-				( (attr = elem.getAttribute("type")) == null || attr.toLowerCase() === "text" );
-		},
-
-		// Position-in-collection
-		"first": createPositionalPseudo(function() {
-			return [ 0 ];
-		}),
-
-		"last": createPositionalPseudo(function( matchIndexes, length ) {
-			return [ length - 1 ];
-		}),
-
-		"eq": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			return [ argument < 0 ? argument + length : argument ];
-		}),
-
-		"even": createPositionalPseudo(function( matchIndexes, length ) {
-			var i = 0;
-			for ( ; i < length; i += 2 ) {
-				matchIndexes.push( i );
-			}
-			return matchIndexes;
-		}),
-
-		"odd": createPositionalPseudo(function( matchIndexes, length ) {
-			var i = 1;
-			for ( ; i < length; i += 2 ) {
-				matchIndexes.push( i );
-			}
-			return matchIndexes;
-		}),
-
-		"lt": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			var i = argument < 0 ? argument + length : argument;
-			for ( ; --i >= 0; ) {
-				matchIndexes.push( i );
-			}
-			return matchIndexes;
-		}),
-
-		"gt": createPositionalPseudo(function( matchIndexes, length, argument ) {
-			var i = argument < 0 ? argument + length : argument;
-			for ( ; ++i < length; ) {
-				matchIndexes.push( i );
-			}
-			return matchIndexes;
-		})
-	}
-};
-
-Expr.pseudos["nth"] = Expr.pseudos["eq"];
-
-// Add button/input type pseudos
-for ( i in { radio: true, checkbox: true, file: true, password: true, image: true } ) {
-	Expr.pseudos[ i ] = createInputPseudo( i );
-}
-for ( i in { submit: true, reset: true } ) {
-	Expr.pseudos[ i ] = createButtonPseudo( i );
-}
-
-// Easy API for creating new setFilters
-function setFilters() {}
-setFilters.prototype = Expr.filters = Expr.pseudos;
-Expr.setFilters = new setFilters();
-
-tokenize = Sizzle.tokenize = function( selector, parseOnly ) {
-	var matched, match, tokens, type,
-		soFar, groups, preFilters,
-		cached = tokenCache[ selector + " " ];
-
-	if ( cached ) {
-		return parseOnly ? 0 : cached.slice( 0 );
-	}
-
-	soFar = selector;
-	groups = [];
-	preFilters = Expr.preFilter;
-
-	while ( soFar ) {
-
-		// Comma and first run
-		if ( !matched || (match = rcomma.exec( soFar )) ) {
-			if ( match ) {
-				// Don't consume trailing commas as valid
-				soFar = soFar.slice( match[0].length ) || soFar;
-			}
-			groups.push( (tokens = []) );
-		}
-
-		matched = false;
-
-		// Combinators
-		if ( (match = rcombinators.exec( soFar )) ) {
-			matched = match.shift();
-			tokens.push({
-				value: matched,
-				// Cast descendant combinators to space
-				type: match[0].replace( rtrim, " " )
-			});
-			soFar = soFar.slice( matched.length );
-		}
-
-		// Filters
-		for ( type in Expr.filter ) {
-			if ( (match = matchExpr[ type ].exec( soFar )) && (!preFilters[ type ] ||
-				(match = preFilters[ type ]( match ))) ) {
-				matched = match.shift();
-				tokens.push({
-					value: matched,
-					type: type,
-					matches: match
-				});
-				soFar = soFar.slice( matched.length );
-			}
-		}
-
-		if ( !matched ) {
-			break;
-		}
-	}
-
-	// Return the length of the invalid excess
-	// if we're just parsing
-	// Otherwise, throw an error or return tokens
-	return parseOnly ?
-		soFar.length :
-		soFar ?
-			Sizzle.error( selector ) :
-			// Cache the tokens
-			tokenCache( selector, groups ).slice( 0 );
-};
-
-function toSelector( tokens ) {
-	var i = 0,
-		len = tokens.length,
-		selector = "";
-	for ( ; i < len; i++ ) {
-		selector += tokens[i].value;
-	}
-	return selector;
-}
-
-function addCombinator( matcher, combinator, base ) {
-	var dir = combinator.dir,
-		skip = combinator.next,
-		key = skip || dir,
-		checkNonElements = base && key === "parentNode",
-		doneName = done++;
-
-	return combinator.first ?
-		// Check against closest ancestor/preceding element
-		function( elem, context, xml ) {
-			while ( (elem = elem[ dir ]) ) {
-				if ( elem.nodeType === 1 || checkNonElements ) {
-					return matcher( elem, context, xml );
-				}
-			}
-			return false;
-		} :
-
-		// Check against all ancestor/preceding elements
-		function( elem, context, xml ) {
-			var oldCache, uniqueCache, outerCache,
-				newCache = [ dirruns, doneName ];
-
-			// We can't set arbitrary data on XML nodes, so they don't benefit from combinator caching
-			if ( xml ) {
-				while ( (elem = elem[ dir ]) ) {
-					if ( elem.nodeType === 1 || checkNonElements ) {
-						if ( matcher( elem, context, xml ) ) {
-							return true;
-						}
-					}
-				}
-			} else {
-				while ( (elem = elem[ dir ]) ) {
-					if ( elem.nodeType === 1 || checkNonElements ) {
-						outerCache = elem[ expando ] || (elem[ expando ] = {});
-
-						// Support: IE <9 only
-						// Defend against cloned attroperties (jQuery gh-1709)
-						uniqueCache = outerCache[ elem.uniqueID ] || (outerCache[ elem.uniqueID ] = {});
-
-						if ( skip && skip === elem.nodeName.toLowerCase() ) {
-							elem = elem[ dir ] || elem;
-						} else if ( (oldCache = uniqueCache[ key ]) &&
-							oldCache[ 0 ] === dirruns && oldCache[ 1 ] === doneName ) {
-
-							// Assign to newCache so results back-propagate to previous elements
-							return (newCache[ 2 ] = oldCache[ 2 ]);
-						} else {
-							// Reuse newcache so results back-propagate to previous elements
-							uniqueCache[ key ] = newCache;
-
-							// A match means we're done; a fail means we have to keep checking
-							if ( (newCache[ 2 ] = matcher( elem, context, xml )) ) {
-								return true;
-							}
-						}
-					}
-				}
-			}
-			return false;
-		};
-}
-
-function elementMatcher( matchers ) {
-	return matchers.length > 1 ?
-		function( elem, context, xml ) {
-			var i = matchers.length;
-			while ( i-- ) {
-				if ( !matchers[i]( elem, context, xml ) ) {
-					return false;
-				}
-			}
-			return true;
-		} :
-		matchers[0];
-}
-
-function multipleContexts( selector, contexts, results ) {
-	var i = 0,
-		len = contexts.length;
-	for ( ; i < len; i++ ) {
-		Sizzle( selector, contexts[i], results );
-	}
-	return results;
-}
-
-function condense( unmatched, map, filter, context, xml ) {
-	var elem,
-		newUnmatched = [],
-		i = 0,
-		len = unmatched.length,
-		mapped = map != null;
-
-	for ( ; i < len; i++ ) {
-		if ( (elem = unmatched[i]) ) {
-			if ( !filter || filter( elem, context, xml ) ) {
-				newUnmatched.push( elem );
-				if ( mapped ) {
-					map.push( i );
-				}
-			}
-		}
-	}
-
-	return newUnmatched;
-}
-
-function setMatcher( preFilter, selector, matcher, postFilter, postFinder, postSelector ) {
-	if ( postFilter && !postFilter[ expando ] ) {
-		postFilter = setMatcher( postFilter );
-	}
-	if ( postFinder && !postFinder[ expando ] ) {
-		postFinder = setMatcher( postFinder, postSelector );
-	}
-	return markFunction(function( seed, results, context, xml ) {
-		var temp, i, elem,
-			preMap = [],
-			postMap = [],
-			preexisting = results.length,
-
-			// Get initial elements from seed or context
-			elems = seed || multipleContexts( selector || "*", context.nodeType ? [ context ] : context, [] ),
-
-			// Prefilter to get matcher input, preserving a map for seed-results synchronization
-			matcherIn = preFilter && ( seed || !selector ) ?
-				condense( elems, preMap, preFilter, context, xml ) :
-				elems,
-
-			matcherOut = matcher ?
-				// If we have a postFinder, or filtered seed, or non-seed postFilter or preexisting results,
-				postFinder || ( seed ? preFilter : preexisting || postFilter ) ?
-
-					// ...intermediate processing is necessary
-					[] :
-
-					// ...otherwise use results directly
-					results :
-				matcherIn;
-
-		// Find primary matches
-		if ( matcher ) {
-			matcher( matcherIn, matcherOut, context, xml );
-		}
-
-		// Apply postFilter
-		if ( postFilter ) {
-			temp = condense( matcherOut, postMap );
-			postFilter( temp, [], context, xml );
-
-			// Un-match failing elements by moving them back to matcherIn
-			i = temp.length;
-			while ( i-- ) {
-				if ( (elem = temp[i]) ) {
-					matcherOut[ postMap[i] ] = !(matcherIn[ postMap[i] ] = elem);
-				}
-			}
-		}
-
-		if ( seed ) {
-			if ( postFinder || preFilter ) {
-				if ( postFinder ) {
-					// Get the final matcherOut by condensing this intermediate into postFinder contexts
-					temp = [];
-					i = matcherOut.length;
-					while ( i-- ) {
-						if ( (elem = matcherOut[i]) ) {
-							// Restore matcherIn since elem is not yet a final match
-							temp.push( (matcherIn[i] = elem) );
-						}
-					}
-					postFinder( null, (matcherOut = []), temp, xml );
-				}
-
-				// Move matched elements from seed to results to keep them synchronized
-				i = matcherOut.length;
-				while ( i-- ) {
-					if ( (elem = matcherOut[i]) &&
-						(temp = postFinder ? indexOf( seed, elem ) : preMap[i]) > -1 ) {
-
-						seed[temp] = !(results[temp] = elem);
-					}
-				}
-			}
-
-		// Add elements to results, through postFinder if defined
-		} else {
-			matcherOut = condense(
-				matcherOut === results ?
-					matcherOut.splice( preexisting, matcherOut.length ) :
-					matcherOut
-			);
-			if ( postFinder ) {
-				postFinder( null, results, matcherOut, xml );
-			} else {
-				push.apply( results, matcherOut );
-			}
-		}
-	});
-}
-
-function matcherFromTokens( tokens ) {
-	var checkContext, matcher, j,
-		len = tokens.length,
-		leadingRelative = Expr.relative[ tokens[0].type ],
-		implicitRelative = leadingRelative || Expr.relative[" "],
-		i = leadingRelative ? 1 : 0,
-
-		// The foundational matcher ensures that elements are reachable from top-level context(s)
-		matchContext = addCombinator( function( elem ) {
-			return elem === checkContext;
-		}, implicitRelative, true ),
-		matchAnyContext = addCombinator( function( elem ) {
-			return indexOf( checkContext, elem ) > -1;
-		}, implicitRelative, true ),
-		matchers = [ function( elem, context, xml ) {
-			var ret = ( !leadingRelative && ( xml || context !== outermostContext ) ) || (
-				(checkContext = context).nodeType ?
-					matchContext( elem, context, xml ) :
-					matchAnyContext( elem, context, xml ) );
-			// Avoid hanging onto element (issue #299)
-			checkContext = null;
-			return ret;
-		} ];
-
-	for ( ; i < len; i++ ) {
-		if ( (matcher = Expr.relative[ tokens[i].type ]) ) {
-			matchers = [ addCombinator(elementMatcher( matchers ), matcher) ];
-		} else {
-			matcher = Expr.filter[ tokens[i].type ].apply( null, tokens[i].matches );
-
-			// Return special upon seeing a positional matcher
-			if ( matcher[ expando ] ) {
-				// Find the next relative operator (if any) for proper handling
-				j = ++i;
-				for ( ; j < len; j++ ) {
-					if ( Expr.relative[ tokens[j].type ] ) {
-						break;
-					}
-				}
-				return setMatcher(
-					i > 1 && elementMatcher( matchers ),
-					i > 1 && toSelector(
-						// If the preceding token was a descendant combinator, insert an implicit any-element `*`
-						tokens.slice( 0, i - 1 ).concat({ value: tokens[ i - 2 ].type === " " ? "*" : "" })
-					).replace( rtrim, "$1" ),
-					matcher,
-					i < j && matcherFromTokens( tokens.slice( i, j ) ),
-					j < len && matcherFromTokens( (tokens = tokens.slice( j )) ),
-					j < len && toSelector( tokens )
-				);
-			}
-			matchers.push( matcher );
-		}
-	}
-
-	return elementMatcher( matchers );
-}
-
-function matcherFromGroupMatchers( elementMatchers, setMatchers ) {
-	var bySet = setMatchers.length > 0,
-		byElement = elementMatchers.length > 0,
-		superMatcher = function( seed, context, xml, results, outermost ) {
-			var elem, j, matcher,
-				matchedCount = 0,
-				i = "0",
-				unmatched = seed && [],
-				setMatched = [],
-				contextBackup = outermostContext,
-				// We must always have either seed elements or outermost context
-				elems = seed || byElement && Expr.find["TAG"]( "*", outermost ),
-				// Use integer dirruns iff this is the outermost matcher
-				dirrunsUnique = (dirruns += contextBackup == null ? 1 : Math.random() || 0.1),
-				len = elems.length;
-
-			if ( outermost ) {
-				outermostContext = context === document || context || outermost;
-			}
-
-			// Add elements passing elementMatchers directly to results
-			// Support: IE<9, Safari
-			// Tolerate NodeList properties (IE: "length"; Safari: <number>) matching elements by id
-			for ( ; i !== len && (elem = elems[i]) != null; i++ ) {
-				if ( byElement && elem ) {
-					j = 0;
-					if ( !context && elem.ownerDocument !== document ) {
-						setDocument( elem );
-						xml = !documentIsHTML;
-					}
-					while ( (matcher = elementMatchers[j++]) ) {
-						if ( matcher( elem, context || document, xml) ) {
-							results.push( elem );
-							break;
-						}
-					}
-					if ( outermost ) {
-						dirruns = dirrunsUnique;
-					}
-				}
-
-				// Track unmatched elements for set filters
-				if ( bySet ) {
-					// They will have gone through all possible matchers
-					if ( (elem = !matcher && elem) ) {
-						matchedCount--;
-					}
-
-					// Lengthen the array for every element, matched or not
-					if ( seed ) {
-						unmatched.push( elem );
-					}
-				}
-			}
-
-			// `i` is now the count of elements visited above, and adding it to `matchedCount`
-			// makes the latter nonnegative.
-			matchedCount += i;
-
-			// Apply set filters to unmatched elements
-			// NOTE: This can be skipped if there are no unmatched elements (i.e., `matchedCount`
-			// equals `i`), unless we didn't visit _any_ elements in the above loop because we have
-			// no element matchers and no seed.
-			// Incrementing an initially-string "0" `i` allows `i` to remain a string only in that
-			// case, which will result in a "00" `matchedCount` that differs from `i` but is also
-			// numerically zero.
-			if ( bySet && i !== matchedCount ) {
-				j = 0;
-				while ( (matcher = setMatchers[j++]) ) {
-					matcher( unmatched, setMatched, context, xml );
-				}
-
-				if ( seed ) {
-					// Reintegrate element matches to eliminate the need for sorting
-					if ( matchedCount > 0 ) {
-						while ( i-- ) {
-							if ( !(unmatched[i] || setMatched[i]) ) {
-								setMatched[i] = pop.call( results );
-							}
-						}
-					}
-
-					// Discard index placeholder values to get only actual matches
-					setMatched = condense( setMatched );
-				}
-
-				// Add matches to results
-				push.apply( results, setMatched );
-
-				// Seedless set matches succeeding multiple successful matchers stipulate sorting
-				if ( outermost && !seed && setMatched.length > 0 &&
-					( matchedCount + setMatchers.length ) > 1 ) {
-
-					Sizzle.uniqueSort( results );
-				}
-			}
-
-			// Override manipulation of globals by nested matchers
-			if ( outermost ) {
-				dirruns = dirrunsUnique;
-				outermostContext = contextBackup;
-			}
-
-			return unmatched;
-		};
-
-	return bySet ?
-		markFunction( superMatcher ) :
-		superMatcher;
-}
-
-compile = Sizzle.compile = function( selector, match /* Internal Use Only */ ) {
-	var i,
-		setMatchers = [],
-		elementMatchers = [],
-		cached = compilerCache[ selector + " " ];
-
-	if ( !cached ) {
-		// Generate a function of recursive functions that can be used to check each element
-		if ( !match ) {
-			match = tokenize( selector );
-		}
-		i = match.length;
-		while ( i-- ) {
-			cached = matcherFromTokens( match[i] );
-			if ( cached[ expando ] ) {
-				setMatchers.push( cached );
-			} else {
-				elementMatchers.push( cached );
-			}
-		}
-
-		// Cache the compiled function
-		cached = compilerCache( selector, matcherFromGroupMatchers( elementMatchers, setMatchers ) );
-
-		// Save selector and tokenization
-		cached.selector = selector;
-	}
-	return cached;
-};
-
-/**
- * A low-level selection function that works with Sizzle's compiled
- *  selector functions
- * @param {String|Function} selector A selector or a pre-compiled
- *  selector function built with Sizzle.compile
- * @param {Element} context
- * @param {Array} [results]
- * @param {Array} [seed] A set of elements to match against
- */
-select = Sizzle.select = function( selector, context, results, seed ) {
-	var i, tokens, token, type, find,
-		compiled = typeof selector === "function" && selector,
-		match = !seed && tokenize( (selector = compiled.selector || selector) );
-
-	results = results || [];
-
-	// Try to minimize operations if there is only one selector in the list and no seed
-	// (the latter of which guarantees us context)
-	if ( match.length === 1 ) {
-
-		// Reduce context if the leading compound selector is an ID
-		tokens = match[0] = match[0].slice( 0 );
-		if ( tokens.length > 2 && (token = tokens[0]).type === "ID" &&
-				context.nodeType === 9 && documentIsHTML && Expr.relative[ tokens[1].type ] ) {
-
-			context = ( Expr.find["ID"]( token.matches[0].replace(runescape, funescape), context ) || [] )[0];
-			if ( !context ) {
-				return results;
-
-			// Precompiled matchers will still verify ancestry, so step up a level
-			} else if ( compiled ) {
-				context = context.parentNode;
-			}
-
-			selector = selector.slice( tokens.shift().value.length );
-		}
-
-		// Fetch a seed set for right-to-left matching
-		i = matchExpr["needsContext"].test( selector ) ? 0 : tokens.length;
-		while ( i-- ) {
-			token = tokens[i];
-
-			// Abort if we hit a combinator
-			if ( Expr.relative[ (type = token.type) ] ) {
-				break;
-			}
-			if ( (find = Expr.find[ type ]) ) {
-				// Search, expanding context for leading sibling combinators
-				if ( (seed = find(
-					token.matches[0].replace( runescape, funescape ),
-					rsibling.test( tokens[0].type ) && testContext( context.parentNode ) || context
-				)) ) {
-
-					// If seed is empty or no tokens remain, we can return early
-					tokens.splice( i, 1 );
-					selector = seed.length && toSelector( tokens );
-					if ( !selector ) {
-						push.apply( results, seed );
-						return results;
-					}
-
-					break;
-				}
-			}
-		}
-	}
-
-	// Compile and execute a filtering function if one is not provided
-	// Provide `match` to avoid retokenization if we modified the selector above
-	( compiled || compile( selector, match ) )(
-		seed,
-		context,
-		!documentIsHTML,
-		results,
-		!context || rsibling.test( selector ) && testContext( context.parentNode ) || context
-	);
-	return results;
-};
-
-// One-time assignments
-
-// Sort stability
-support.sortStable = expando.split("").sort( sortOrder ).join("") === expando;
-
-// Support: Chrome 14-35+
-// Always assume duplicates if they aren't passed to the comparison function
-support.detectDuplicates = !!hasDuplicate;
-
-// Initialize against the default document
-setDocument();
-
-// Support: Webkit<537.32 - Safari 6.0.3/Chrome 25 (fixed in Chrome 27)
-// Detached nodes confoundingly follow *each other*
-support.sortDetached = assert(function( el ) {
-	// Should return 1, but returns 4 (following)
-	return el.compareDocumentPosition( document.createElement("fieldset") ) & 1;
-});
-
-// Support: IE<8
-// Prevent attribute/property "interpolation"
-// https://msdn.microsoft.com/en-us/library/ms536429%28VS.85%29.aspx
-if ( !assert(function( el ) {
-	el.innerHTML = "<a href='#'></a>";
-	return el.firstChild.getAttribute("href") === "#" ;
-}) ) {
-	addHandle( "type|href|height|width", function( elem, name, isXML ) {
-		if ( !isXML ) {
-			return elem.getAttribute( name, name.toLowerCase() === "type" ? 1 : 2 );
-		}
-	});
-}
-
-// Support: IE<9
-// Use defaultValue in place of getAttribute("value")
-if ( !support.attributes || !assert(function( el ) {
-	el.innerHTML = "<input/>";
-	el.firstChild.setAttribute( "value", "" );
-	return el.firstChild.getAttribute( "value" ) === "";
-}) ) {
-	addHandle( "value", function( elem, name, isXML ) {
-		if ( !isXML && elem.nodeName.toLowerCase() === "input" ) {
-			return elem.defaultValue;
-		}
-	});
-}
-
-// Support: IE<9
-// Use getAttributeNode to fetch booleans when getAttribute lies
-if ( !assert(function( el ) {
-	return el.getAttribute("disabled") == null;
-}) ) {
-	addHandle( booleans, function( elem, name, isXML ) {
-		var val;
-		if ( !isXML ) {
-			return elem[ name ] === true ? name.toLowerCase() :
-					(val = elem.getAttributeNode( name )) && val.specified ?
-					val.value :
-				null;
-		}
-	});
-}
-
-// EXPOSE
-var _sizzle = window.Sizzle;
-
-Sizzle.noConflict = function() {
-	if ( window.Sizzle === Sizzle ) {
-		window.Sizzle = _sizzle;
-	}
-
-	return Sizzle;
-};
-
-if ( true ) {
-	!(__WEBPACK_AMD_DEFINE_RESULT__ = function() { return Sizzle; }.call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-// Sizzle requires that there be a global window in Common-JS like environments
-} else if ( typeof module !== "undefined" && module.exports ) {
-	module.exports = Sizzle;
-} else {
-	window.Sizzle = Sizzle;
-}
-// EXPOSE
-
-})( window );
-
-
-/***/ }),
-/* 21 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(16);
+var content = __webpack_require__(12);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -17694,7 +14477,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(22)(content, options);
+var update = __webpack_require__(17)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -17726,7 +14509,7 @@ if(false) {
 }
 
 /***/ }),
-/* 22 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -17795,7 +14578,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(23);
+var	fixUrls = __webpack_require__(18);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -18132,7 +14915,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 23 */
+/* 18 */
 /***/ (function(module, exports) {
 
 
@@ -18227,7 +15010,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 24 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {var scope = (typeof global !== "undefined" && global) ||
@@ -18283,7 +15066,7 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(19);
+__webpack_require__(15);
 // On some exotic environments, it's not clear which object `setimmediate` was
 // able to install onto.  Search each possibility in the same order as the
 // `setimmediate` library.
@@ -18294,21 +15077,21 @@ exports.clearImmediate = (typeof self !== "undefined" && self.clearImmediate) ||
                          (typeof global !== "undefined" && global.clearImmediate) ||
                          (this && this.clearImmediate);
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 25 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(35)
+__webpack_require__(28)
 
-var Component = __webpack_require__(0)(
+var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(9),
+  __webpack_require__(7),
   /* template */
-  __webpack_require__(32),
+  __webpack_require__(25),
   /* scopeId */
   null,
   /* cssModules */
@@ -18335,18 +15118,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 26 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(34)
+__webpack_require__(27)
 
-var Component = __webpack_require__(0)(
+var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(10),
+  __webpack_require__(8),
   /* template */
-  __webpack_require__(31),
+  __webpack_require__(24),
   /* scopeId */
   "data-v-4147ddbe",
   /* cssModules */
@@ -18373,18 +15156,18 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 27 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
 /* styles */
-__webpack_require__(21)
+__webpack_require__(16)
 
-var Component = __webpack_require__(0)(
+var Component = __webpack_require__(1)(
   /* script */
-  __webpack_require__(11),
+  __webpack_require__(9),
   /* template */
-  __webpack_require__(29),
+  __webpack_require__(23),
   /* scopeId */
   "data-v-10787bf2",
   /* cssModules */
@@ -18411,41 +15194,7 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var Component = __webpack_require__(0)(
-  /* script */
-  __webpack_require__(12),
-  /* template */
-  __webpack_require__(30),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/kapok/Github/vue.quick/src/components/clay.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] clay.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-35b3ce32", Component.options)
-  } else {
-    hotAPI.reload("data-v-35b3ce32", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 29 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18489,22 +15238,7 @@ if (false) {
 }
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('svg')
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-35b3ce32", module.exports)
-  }
-}
-
-/***/ }),
-/* 31 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18559,7 +15293,7 @@ if (false) {
 }
 
 /***/ }),
-/* 32 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
@@ -18571,11 +15305,7 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
     attrs: {
       "to": "/PageTwoLink"
     }
-  }, [_vm._v("Vue组件实例")])], 1), _vm._v(" "), _c('li', [_c('router-link', {
-    attrs: {
-      "to": "/clay"
-    }
-  }, [_vm._v("clay.js")])], 1)]), _vm._v(" "), _c('router-view')], 1)
+  }, [_vm._v("Vue组件实例")])], 1)]), _vm._v(" "), _c('router-view')], 1)
 },staticRenderFns: []}
 module.exports.render._withStripped = true
 if (false) {
@@ -18586,7 +15316,7 @@ if (false) {
 }
 
 /***/ }),
-/* 33 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21214,20 +17944,20 @@ if (inBrowser && window.Vue) {
 
 /* harmony default export */ __webpack_exports__["a"] = (VueRouter);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(4)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
-/* 34 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(17);
+var content = __webpack_require__(13);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(5)("6a38f6ac", content, false);
+var update = __webpack_require__(4)("6a38f6ac", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -21243,17 +17973,17 @@ if(false) {
 }
 
 /***/ }),
-/* 35 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(18);
+var content = __webpack_require__(14);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(5)("1f117ce8", content, false);
+var update = __webpack_require__(4)("1f117ce8", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -21269,7 +17999,7 @@ if(false) {
 }
 
 /***/ }),
-/* 36 */
+/* 29 */
 /***/ (function(module, exports) {
 
 /**
@@ -21302,10 +18032,10 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 37 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(7);
+module.exports = __webpack_require__(6);
 
 
 /***/ })

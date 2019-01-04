@@ -4,7 +4,7 @@ import App from './App.vue';
 // 1.引入刚刚配置的路由（router/index.js）
 import routerObj from './router';
 
-import clay from './clay.js';
+import clay from 'clay-core';
 
 //根对象
 var vm = new Vue({
